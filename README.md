@@ -1,5 +1,5 @@
-# PancaTantra-Graph
-# Model the PancaTantra Stories, Characters, and aphorisms as Nodes of a graph and define a relationship between them
+# graphtantra
+# Model the Panchatantra Stories, Characters, and aphorisms as Nodes of a graph and define a relationship between them
 
 # Tools #
 
