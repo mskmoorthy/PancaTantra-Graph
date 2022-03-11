@@ -1,0 +1,3 @@
+digraph P  {
+     {rusty, lively, cautious, crafty}->{rusty, lively, cautious, crafty}
+}
