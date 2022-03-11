@@ -1,4 +1,4 @@
-digraph P  {
+strict digraph P  {
         rusty [shape=circle, color=red]
         lively [color=blue, shape=circle]
         crafty [shape=circle, color=green]
