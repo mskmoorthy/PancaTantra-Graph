@@ -4,4 +4,4 @@ all: panchalogo.png panchalogo.pdf
 	dot -Tpng $< -o  $@
 
 %.pdf:%.gv
-	dot -Tpng $< -o  $@
+	dot -Tpdf $< -o  $@
