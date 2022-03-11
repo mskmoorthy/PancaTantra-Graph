@@ -1,0 +1,17 @@
+* Desired Use Cases
+
+This section enumerates the use-cases for which we want to generate
+graphs. These should guide the data representation we choose.
+
+* System Design
+
+  - Pick a declarative representation for the story facts we capture.
+  - Representation should be independent of visual artifacts needed to
+    draw graphs.
+  - Design data structures  (Python Classes) to hold this data.
+  - Generate desired graphs from Python code that loads the data, then
+    calls graphviz through the Python  API.
+  - In effect, small Python programs produce any given graph-view of
+    what is in the data.
+
+    
