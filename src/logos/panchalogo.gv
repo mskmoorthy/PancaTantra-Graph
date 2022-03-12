@@ -1,12 +1,14 @@
 // see https://stackoverflow.com/questions/46317240/how-to-layout-complete-graphs-circularly-using-dot-and-graphviz
 
 graph P  {
-        layout=circo
-        book [shape=circle]
-        rusty [shape=circle, fillcolor=red]
-        lively [fillcolor=blue, shape=circle]
-        cautious [fillcolor=green, shape=circle]
-        crafty [shape=circle, fillcolor=green]
+        layout=circo 
+        
+        book 
+        rusty [fillcolor=red]
+        lively [fillcolor=blue]
+        cautious [fillcolor=green]
+        crafty [fillcolor=green]
+        
         book--rusty--lively--cautious--crafty--book //pentagon
 book--lively--crafty--rusty--cautious--book //diagonals
 }
