@@ -1,1 +1,3 @@
 * Source Code 
+  - Module ~panch.classes~ contains our classes, e.g., ~panch.Story~ and ~panch.Character~.
+  - play.ipynb is a Jupyter notebook
