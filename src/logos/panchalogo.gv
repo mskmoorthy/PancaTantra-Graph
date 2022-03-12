@@ -1,6 +1,6 @@
 // see https://stackoverflow.com/questions/46317240/how-to-layout-complete-graphs-circularly-using-dot-and-graphviz
 
-strict digraph P  {
+graph P  {
         layout=circo
         rusty [shape=circle, fillcolor=red]
         lively [fillcolor=blue, shape=circle]
