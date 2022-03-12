@@ -6,6 +6,6 @@ strict digraph P  {
         lively [fillcolor=blue, shape=circle]
         crafty [shape=circle, fillcolor=green]
         cautious [fillcolor=green, shape=circle]
-        book [shape=box]
+        book [shape=circle]
         {book, rusty, lively, cautious, crafty}->{book, rusty, lively, cautious, crafty}
 }
