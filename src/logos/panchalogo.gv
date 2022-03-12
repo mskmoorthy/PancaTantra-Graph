@@ -7,6 +7,6 @@ graph P  {
         crafty [shape=circle, fillcolor=green]
         cautious [fillcolor=green, shape=circle]
         book [shape=circle]
-        book->rusty->lively->cautious->crafty->book //pentagon
-book->lively->crafty->rusty->cautious->book //diagonals
+        book--rusty--lively--cautious--crafty--book //pentagon
+book--lively--crafty--rusty--cautious--book //diagonals
 }
