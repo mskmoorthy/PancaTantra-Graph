@@ -2,10 +2,10 @@
 
 strict digraph P  {
         layout=circo
-        rusty [shape=circle, color=red]
-        lively [color=blue, shape=circle]
-        crafty [shape=circle, color=green]
-        cautious [color=green, shape=circle]
+        rusty [shape=circle, fillcolor=red]
+        lively [fillcolor=blue, shape=circle]
+        crafty [shape=circle, fillcolor=green]
+        cautious [fillcolor=green, shape=circle]
         book [shape=box]
         {book, rusty, lively, cautious, crafty}->{book, rusty, lively, cautious, crafty}
 }
