@@ -2,13 +2,14 @@
 
 graph P  {
         layout=circo 
-        
+        style=filled
         book 
         rusty [fillcolor=red]
         lively [fillcolor=blue]
-        cautious [fillcolor=green]
+        cautious [fillcolor=yellow]
         crafty [fillcolor=green]
         
         book--rusty--lively--cautious--crafty--book //pentagon
 book--lively--crafty--rusty--cautious--book //diagonals
+
 }
