@@ -32,6 +32,6 @@ if __name__ == '__main__':
 s = Story(title="Lion, Bull and Two Jackals",
           moral='friendship and villainy ',
           told_by='panchatantra',
-          cast = [c],
+          cast=[c],
           stories=[])
 pprint(vars(s))
