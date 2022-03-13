@@ -1,6 +1,7 @@
 """
 Utility Classes
 """
+from pprint import pprint
 
 # Helper: Based on
 # https://github.com/dabeaz/python-cookbook/blob/master/src/8/simplified_initialization_of_data_structures/example2.py#start-of-content
@@ -28,11 +29,12 @@ class Structure:
 
 # Example use
 if __name__ == '__main__':
+
     class Animal(Structure):
         _fields = ['name', 'species', 'nature']
 
     a1 = Animal('rusty', 'lion', 'brave')
     a2 = Animal('lively', species='bull', nature='gentle')
-    print([v for v in a1._fields])
-    print(a1.name, a1.species, a1.nature)
-    print(a2.name, a2.species, a2.nature)
+    pprint(a1._fields)
+    pprint(vars(a1))
+    pprint(vars(a2))
