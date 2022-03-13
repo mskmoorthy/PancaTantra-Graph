@@ -28,7 +28,7 @@ if __name__ == '__main__':
     print(c.name, c.species, c.nature)
 s = Story(
     title="Lion, Bull and Two Jackals",
-    moral='friendship and villany ',
+    moral='friendship and villainy ',
     told_by='panchatantra',
     stories=[])
 print(s.title, s.told_by, s.moral, s.stories)
