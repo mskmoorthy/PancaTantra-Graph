@@ -1,25 +1,25 @@
 """
 Classes For Panchatantra  Graphs
 """
+
+
 from utils import Structure  # init helper
 
 
 class Story(Structure):
     """ A Story consists of Characters, etc."""
-    _fields = ['title', 'narrator', 'moral', 'cast', 'stories']
-    id  # unique id (computed)
+    _fields = ['title', 'told_by', 'told_to',
+               'moral', 'url', 'cast', 'stories']
 
 
 class Character(Structure):
     """A character in a Story"""
     _fields = ['name',  'species', 'nature', 'said', 'narrated', 'appears_in ']
-    id  # Unique id (computed)
 
 
 class Utterance(Structure):
     """An Utterance by a  character in a Story"""
     _fields = ['by', 'to', 'text']
-    id  # Unique id (computed)
 
 
 # Example use
@@ -29,6 +29,6 @@ if __name__ == '__main__':
 s = Story(
     title="Lion, Bull and Two Jackals",
     moral='friendship and villany ',
-    narrator='panchatantra',
+    told_by='panchatantra',
     stories=[])
-print(s.title, s.narrator, s.moral, s.stories)
+print(s.title, s.told_by, s.moral, s.stories)
