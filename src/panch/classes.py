@@ -15,7 +15,9 @@ class Story(Structure):
 
 class Character(Structure):
     """A character in a Story"""
-    _fields = ['name', 'species', 'nature', 'said', 'narrated', 'appears_in ']
+    _fields = [
+        'name', 'species', 'nature', 'color', 'said', 'narrated', 'appears_in '
+    ]
 
 
 class Utterance(Structure):
@@ -25,10 +27,11 @@ class Utterance(Structure):
 
 # Example use
 if __name__ == '__main__':
-    c = Character('rusty', 'lion', 'brave')
+    c = Character('rusty', 'lion', 'brave', color='red')
     pprint(vars(c))
 s = Story(title="Lion, Bull and Two Jackals",
           moral='friendship and villainy ',
           told_by='panchatantra',
+          cast = [c],
           stories=[])
 pprint(vars(s))
