@@ -18,6 +18,7 @@ class Structure:
         # Set all of the positional arguments
         for name, value in zip(self._fields, args):
             setattr(self, name, value)
+            kwargs.pop(name, '')
 
         # Set the remaining keyword arguments
         for name in kwargs.keys():
