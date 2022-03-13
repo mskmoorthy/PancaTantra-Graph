@@ -27,7 +27,7 @@ class Structure:
 
 class Story(Structure):
     """ A Story consists of Characters, etc."""
-    _fields = ['title', 'narrator', 'moral', 'stories']
+    _fields = ['title', 'narrator', 'moral', 'cast', 'stories']
     id  # unique id (computed)
 
 
