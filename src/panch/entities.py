@@ -23,4 +23,4 @@ stories['book-1'] = Story(title='book-1', cast=cast)
 
 if __name__ == '__main__':
     pprint(vars(stories['book-1']))
-    [pprint(vars(cast[k])) for k in cast.keys()]
+    [pprint(vars(cast[k])) for k in cast]
