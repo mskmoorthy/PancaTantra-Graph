@@ -29,9 +29,9 @@ class Utterance(Structure):
 if __name__ == '__main__':
     c = Character('rusty', 'lion', 'brave', color='red')
     pprint(vars(c))
-s = Story(title="Lion, Bull and Two Jackals",
+    s = Story(title="Lion, Bull and Two Jackals",
           moral='friendship and villainy ',
           told_by='panchatantra',
           cast=[c],
           stories=[])
-pprint(vars(s))
+    pprint(vars(s))
