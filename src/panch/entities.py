@@ -2,6 +2,7 @@
 Instances that make up the Panchatantra: Story, Character
 """
 from classes import Story, Character
+from pprint import pprint
 
 # cast: Holds all known Character instances:
 cast = {}
@@ -19,3 +20,7 @@ cast['cautious'] = Character(name='cautious', species='jackal', color='yellow')
 stories = {}
 
 stories['book-1'] = Story(title='book-1', cast=cast)
+
+if __name__ == '__main__':
+    pprint(vars(stories['book-1']))
+    [pprint(vars(cast[k])) for k in cast.keys()]
