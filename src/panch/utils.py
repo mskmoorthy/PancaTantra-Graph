@@ -25,8 +25,9 @@ class Structure:
         for name in kwargs.keys():
             if (name in self._fields):
                 setattr(self, name, kwargs[name])
-                else:
-                    raise TypeError('Illegal field: {}'.format(name))
+            else:
+                raise TypeError('Illegal field: {}'.format(name))
+
 
 # Example use
 if __name__ == '__main__':
