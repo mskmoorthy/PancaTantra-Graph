@@ -3,24 +3,23 @@ Instances that make up the Panchatantra: Story, Character
 """
 from classes import Story, Character
 from pprint import pprint
+import csv
 
-# cast: Holds all known Character instances:
+values = []
+reader = csv.DictReader(open('cast.csv'), skipinitialspace=True)
+for row in reader:
+    values.append(row)
+
+print(values)
+
+# cast: Holds all known  instances indexed by name
+instances = [Character(**dict) for dict in values]
+pprint("check first instance")
+pprint(vars(instances[0]))
 cast = {}
-
-# Will be eventually read from a data file.
-
-cast['rusty'] = Character(name='rusty', species='lion', color='red')
-cast['lively'] = Character(name='lively', species='bull', color='blue')
-cast['crafty'] = Character(name='crafty', species='jackal', color='green')
-cast['cautious'] = Character(name='cautious', species='jackal', color='yellow')
-
 # stories: Holds all known Story instances:
-# Will be eventually read from a data file.
-
 stories = {}
-
 stories['book-1'] = Story(title='book-1', cast=cast)
-
 if __name__ == '__main__':
+    print("Story:")
     pprint(vars(stories['book-1']))
-    [pprint(vars(c)) for _, c in cast.items()]
