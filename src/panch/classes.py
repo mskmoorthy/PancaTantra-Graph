@@ -9,7 +9,8 @@ from utils import Structure  # init helper
 class Story(Structure):
     """ A Story consists of Characters, etc."""
     _fields = [
-        'title', 'told_by', 'told_to', 'moral', 'url', 'cast', 'stories'
+        'index', 'title', 'told_by', 'told_to', 'moral', 'url', 'cast',
+        'stories'
     ]
 
 
