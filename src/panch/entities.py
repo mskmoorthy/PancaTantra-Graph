@@ -8,7 +8,7 @@ import csv
 
 reader = csv.DictReader(open('cast.csv'), skipinitialspace=True)
 cast = {row['name']: Character(**row) for row in reader}
-
+# stories will be read in from a csv file:
 # stories: Holds all known Story instances:
 stories = {}
 stories['book-1'] = Story(title='book-1', cast=cast)
