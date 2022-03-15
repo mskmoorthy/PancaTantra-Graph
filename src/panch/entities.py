@@ -6,7 +6,6 @@ from classes import Story, Character
 from pprint import pprint
 import csv
 
-cast = {}
 reader = csv.DictReader(open('cast.csv'), skipinitialspace=True)
 cast = {row['name']: Character(**row) for row in reader}
 
