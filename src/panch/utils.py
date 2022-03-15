@@ -6,8 +6,6 @@ from pprint import pprint
 
 # Helper: Based on
 # https://github.com/dabeaz/python-cookbook/blob/master/src/8/simplified_initialization_of_data_structures/example2.py#start-of-content
-# 8.11. Simplifying the Initialization of Data Structures
-# Python Cookbook By David Beazley Brian K. Jones
 
 
 class Structure:
@@ -23,12 +21,12 @@ class Structure:
             if (name in kwargs):
                 raise TypeError('Duplicate values for {}'.format(
                     ','.join(kwargs)))
-
         # Set the remaining keyword arguments
         for name in kwargs.keys():
             if (name in self._fields):
                 setattr(self, name, kwargs[name])
-
+                else:
+                    raise TypeError('Illegal field: {}'.format(name))
 
 # Example use
 if __name__ == '__main__':
