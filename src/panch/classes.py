@@ -15,9 +15,7 @@ class Story(Structure):
 
 class Character(Structure):
     """A character in a Story"""
-    _fields = [
-        'name', 'species', 'nature', 'color', 'said', 'narrated', 'appears_in '
-    ]
+    _fields = ['name', 'species', 'nature', 'color', 'narrated']
 
 
 class Utterance(Structure):
