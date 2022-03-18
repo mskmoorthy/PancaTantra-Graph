@@ -9,9 +9,15 @@ graphs. These should guide the data representation we choose.
   - Representation should be independent of visual artifacts needed to
     draw graphs.
   - Design data structures  (Python Classes) to hold this data.
+  - Instantiate objects by reading in CSV files.
   - Generate desired graphs from Python code that loads the data, then
     calls graphviz through the Python  API.
   - In effect, small Python programs produce any given graph-view of
     what is in the data.
 
     
+
+* Modules 
+
+  - classes.py :: Defines Character, Stories etc.
+  - entities.py ::  Instantiates  --- Character, Story, ... from CSV data.
