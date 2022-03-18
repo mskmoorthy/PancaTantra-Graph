@@ -19,14 +19,9 @@ class Character(Structure):
     _fields = ['name', 'species', 'nature', 'color', 'narrated']
 
 
-class Utterance(Structure):
-    """An Utterance by a  character in a Story"""
-    _fields = ['by', 'to', 'text']
-
-
 # Example use
 if __name__ == '__main__':
-    c = Character('rusty', 'lion', 'brave', color='red')
+    c = Character(name='rusty', species='lion', nature='brave', color='red')
     pprint(vars(c))
     s = Story(title="Lion, Bull and Two Jackals",
               moral='friendship and villainy ',

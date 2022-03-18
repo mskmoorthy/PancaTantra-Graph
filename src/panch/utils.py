@@ -8,20 +8,11 @@ from pprint import pprint
 # https://github.com/dabeaz/python-cookbook/blob/master/src/8/simplified_initialization_of_data_structures/example2.py#start-of-content
 
 
+# Only takes    keyword arguments
 class Structure:
     _fields = []
 
-    def __init__(self, *args, **kwargs):
-        if len(args) > len(self._fields):
-            raise TypeError('Expected {} arguments'.format(len(self._fields)))
-
-        # Set all of the positional arguments
-        for name, value in zip(self._fields, args):
-            setattr(self, name, value)
-            if (name in kwargs):
-                raise TypeError('Duplicate values for {}'.format(
-                    ','.join(kwargs)))
-        # Set the remaining keyword arguments
+    def __init__(self, **kwargs):
         for name in kwargs.keys():
             if (name in self._fields):
                 setattr(self, name, kwargs[name])
@@ -35,8 +26,8 @@ if __name__ == '__main__':
     class Animal(Structure):
         _fields = ['name', 'species', 'nature']
 
-    a1 = Animal('rusty', 'lion', 'brave')
-    a2 = Animal('lively', species='bull', nature='gentle')
+    a1 = Animal(name='rusty', species='lion', nature='brave')
+    a2 = Animal(name='lively', species='bull', nature='gentle')
     pprint(a1._fields)
     pprint(vars(a1))
     pprint(vars(a2))
