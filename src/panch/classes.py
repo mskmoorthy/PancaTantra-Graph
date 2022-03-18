@@ -3,23 +3,31 @@ Classes For Panchatantra  Graphs
 """
 
 from pprint import pprint
-from utils import Structure  # init helper
 
 
-class Story(Structure):
-    """ A Story consists of Characters, etc."""
+class DictInit:
+    _fields = []
+
+    def __init__(self, **kwargs):
+        for name in kwargs.keys():
+            if (name in self._fields):
+                setattr(self, name, kwargs[name])
+            else:
+                raise TypeError('Illegal field: {}'.format(name))
+
+
+class Story(DictInit):
+    """Story(title=..., ...) A panchatantra story"""
     _fields = [
-        'index', 'title', 'told_by', 'told_to', 'moral', 'url', 'cast',
-        'stories'
+        'title', 'told_by', 'told_to', 'moral', 'url', 'cast', 'stories'
     ]
 
 
-class Character(Structure):
-    """A character in a Story"""
+class Character(DictInit):
+    """Character(name = ..., ...) A story character"""
     _fields = ['name', 'species', 'nature', 'color', 'narrated']
 
 
-# Example use
 if __name__ == '__main__':
     c = Character(name='rusty', species='lion', nature='brave', color='red')
     pprint(vars(c))
