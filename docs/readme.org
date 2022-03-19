@@ -4,4 +4,4 @@
 * Resources 
 
 
-  -   [[https://graphviz.org/][GraphViz]]
+  -   [[https://graphviz.org/][GraphViz]] Python API: python3-pygraphviz
