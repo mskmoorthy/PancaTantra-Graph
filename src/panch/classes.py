@@ -37,7 +37,7 @@ class Story(DictInit):
 
 class Character(DictInit):
     """Character(name = ..., ...) A story character"""
-    _fields = ['name', 'species', 'nature', 'color', 'narrated']
+    _fields = ['name', 'species', 'color', 'nature', 'narrated']
 
     def show(self):
         "Print out instance."
