@@ -10,7 +10,7 @@ cast = {row['name']: Character(**row) for row in reader}
 
 # stories: Holds all known Story instances:
 reader = csv.DictReader(open('book-1.csv'), skipinitialspace=True)
-stories = {row['title']: Story(**row) for row in reader}
+stories = {row['index']: Story(**row) for row in reader}
 
 if __name__ == '__main__':
-    stories["wedge-pulling monkey"].show()
+    [stories[s].show() for s in stories]
