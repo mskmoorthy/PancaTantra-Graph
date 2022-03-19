@@ -2,8 +2,6 @@
 Classes For Panchatantra  Graphs
 """
 
-from pprint import pprint
-
 
 class DictInit:
     _fields = []
@@ -19,19 +17,20 @@ class DictInit:
 class Story(DictInit):
     """Story(title=..., ...) A panchatantra story"""
     _fields = [
-        'title', 'told_by', 'told_to', 'moral', 'url', 'cast', 'stories'
+        'index', 'title', 'told_by', 'told_to', 'moral', 'url', 'cast',
+        'stories'
     ]
 
     def show(self):
         "Print out instance."
         for f in self._fields:
             try:
-                getattr(self, f)
-                pprint(f)
+                v = getattr(self, f)
+                print(f)
                 if (f == 'cast'):
-                    [c.show() for c in getattr(self, f)]
+                    [c.show() for c in v]
                 else:
-                    pprint(getattr(self, f))
+                    print(v)
             except AttributeError:
                 pass
 
@@ -44,9 +43,8 @@ class Character(DictInit):
         "Print out instance."
         for f in self._fields:
             try:
-                getattr(self, f)
-                pprint(f)
-                pprint(getattr(self, f))
+                v = getattr(self, f)
+                print("{}: {}".format(f, v))
             except AttributeError:
                 pass
 
