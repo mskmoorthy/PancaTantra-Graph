@@ -1,13 +1,13 @@
 # Scratchpad for trying out short code snippets
 import importlib
-from entities import cast, stories
+import entities
 
 
 # Missing characters in cast:
 def cast_missing():
-    c = [stories[id].told_to
-         for id in stories] + [stories[id].told_by for id in stories]
-    new = [w for w in c if w not in cast]
+    c = [entities.stories[id].told_to for id in entities.stories
+         ] + [entities.stories[id].told_by for id in entities.stories]
+    new = [w for w in c if w not in entities.cast]
     return [i for i in {k: 1 for k in new}]
 
 
