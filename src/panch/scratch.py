@@ -6,8 +6,7 @@ import entities
 def cast_missing():
     s = entities.stories
     c = [s[id].told_to for id in s] + [s[id].told_by for id in s]
-    unseen = {w for w in c if w not in entities.cast}
-    return [i for i in unseen]
+    return {w for w in c if w not in entities.cast}
 
 
 print(cast_missing())
