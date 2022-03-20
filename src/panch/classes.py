@@ -47,13 +47,3 @@ class Character(DictInit):
                 print("{}: {}".format(f, v))
             except AttributeError:
                 pass
-
-
-if __name__ == '__main__':
-    c = Character(name='rusty', species='lion', nature='brave', color='red')
-    s = Story(title="Lion, Bull and Two Jackals",
-              moral='friendship and villainy ',
-              told_by='panchatantra',
-              cast=[c],
-              stories=[])
-    s.show()
