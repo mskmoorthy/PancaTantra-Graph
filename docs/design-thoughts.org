@@ -15,6 +15,7 @@ graphs. These should guide the data representation we choose.
   - Instantiate objects by reading in CSV files. entities.py
   - Generate desired graphs from Python code that loads the data, then
     calls graphviz through the Python  API.
+  - Continuously validate data via utils in scratch.py.
   - In effect, small Python programs produce any given graph-view of
     what is in the data.
 
@@ -30,5 +31,6 @@ graphs. These should guide the data representation we choose.
   - [[http://www.columbia.edu/itc/mealac/pritchett/00litlinks/panchatantra_ryder/index.html#book1][Panchatantra Columbia Press]]
   - [[https://www.gutenberg.org/files/25545/25545-h/25545-h.htm][Gutenberg: Children's Literature]]
   - [[https://archive.org/stream/Panchatantra_Arthur_W_Ryder/Panchatantra%20-%20Arthur%20W%20Ryder_djvu.txt][Internet Archive: Panchatantra: Arthur Ryder]]
+  - [[https://www.amazon.com/Books-Narindar-Uberoi-Kelly/s?rh=n%3A283155%2Cp_27%3ANarindar+Uberoi+Kelly][Panchatantra]]
 
 
