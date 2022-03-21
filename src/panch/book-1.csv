@@ -1,5 +1,4 @@
 index, title, told_by, told_to, moral, stories
-0, "lion, bull, and two jackals", "sharma", "three princes", "friendship and villainy", "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33"
 1,  "wedge-pulling monkey", "cautious", "crafty", "bright people avoid meddling"
 2,  "jackal and the war drum", "crafty", "rusty", "there are many sounds that do not warn of danger"
 3,  "merchant named able", "crafty", "lively", "always pay honour to a King’s people"
@@ -33,3 +32,4 @@ index, title, told_by, told_to, moral, stories
 31, "twin parrots, good and bad", "cautious", "crafty", "even brothers can become prime examples of good and bad education"
 32, "sensible foe", "cautious", "crafty", "When all is lost, the noble person tries to serve others even at his own expense"
 33, "foolish friend", "cautious", "crafty", "beware of making friends with fools and trusting them too much"
+34, "lion, bull, and two jackals", "sharma", "three princes", "friendship and villainy", "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33"

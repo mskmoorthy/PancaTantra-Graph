@@ -17,8 +17,14 @@ class DictInit:
 class Story(DictInit):
     """Story(title=..., ...) A panchatantra story"""
     _fields = [
-        'index', 'title', 'told_by', 'told_to', 'moral', 'url', 'cast',
-        'stories'
+        'index',
+        'title',
+        'told_by',
+        'told_to',
+        'moral',
+        'stories',
+        'url',
+        'cast',
     ]
 
     def show(self):
