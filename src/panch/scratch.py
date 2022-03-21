@@ -1,4 +1,6 @@
 # Scratchpad for trying out short code snippets
+__author__ = "tv.raman.tv@gmail.com"
+
 import entities
 
 
