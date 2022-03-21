@@ -14,13 +14,13 @@ def stories_finalize(table):
             s.stories = s.stories.split()
 
 
-reader = csv.DictReader(open('cast.csv'), skipinitialspace=True)
-cast = {row['name']: Character(**row) for row in reader}
+reader = csv.DictReader(open('cast-1.csv'), skipinitialspace=True)
+cast_1 = {row['name']: Character(**row) for row in reader}
 
 # stories: Holds all known Story instances:
 reader = csv.DictReader(open('book-1.csv'), skipinitialspace=True)
-stories = {row['index']: Story(**row) for row in reader}
-stories_finalize(stories)
+book_1 = {row['index']: Story(**row) for row in reader}
+stories_finalize(book_1)
 
 if __name__ == '__main__':
-    [stories[s].show() for s in stories]
+    [book_1[s].show() for s in book_1]
