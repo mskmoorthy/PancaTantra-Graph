@@ -7,11 +7,11 @@ import csv
 
 
 def stories_finalize(table):
-    "Post process stories in table as needed."
+    "Post process stories in table."
     for id in table:
         s = table[id]
         if (isinstance(s.stories, str)):
-            s.stories = s.stories.split(",")
+            s.stories = s.stories.split()
 
 
 reader = csv.DictReader(open('cast.csv'), skipinitialspace=True)

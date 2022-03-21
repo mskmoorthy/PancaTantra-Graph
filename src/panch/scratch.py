@@ -11,4 +11,9 @@ def cast_missing():
     return {w for w in c if w not in entities.cast}
 
 
-print(cast_missing())
+def stories_missing():
+    [i for i in entities.stories['34'].stories if i not in entities.stories]
+
+
+print("Missing Cast Members", cast_missing())
+print("Missing stories", stories_missing())
