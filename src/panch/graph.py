@@ -20,4 +20,4 @@ for i in b:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 graph.write("book-1.dot")
-graph.draw("book-1.pdf")
+graph.draw("book-1.pdf", prog="neato")
