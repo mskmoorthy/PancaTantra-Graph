@@ -19,6 +19,5 @@ for i in b:
     if b[i].stories is not None:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
-graph.layout(prog="circo")  # layout with default (neato)
 graph.write("book-1.dot")
 graph.draw("book-1.pdf")
