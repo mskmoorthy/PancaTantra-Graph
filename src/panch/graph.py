@@ -9,7 +9,7 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-g = pgv.AGraph(directed=True, layout="circo")
+g = pgv.AGraph(directed=True, layout="circo", name="Panchatantra Book 1")
 g.add_nodes_from([name for name in c])
 for i in b:
     g.add_edge(b[i].told_by, b[i].title)
@@ -21,4 +21,4 @@ for i in b:
 g.layout(prog="circo")  # layout with default (neato)
 g.write("book-1.dot")
 
-g.draw("book-1.png")
+#g.draw("book-1.png")
