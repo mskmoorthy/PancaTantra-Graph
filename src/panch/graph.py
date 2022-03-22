@@ -9,7 +9,7 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(directed=True,
+graph = pgv.AGraph(directed=False,
                    name="book-1",
                    size="8,8",
                    label="graphatantra")
@@ -20,7 +20,7 @@ for i in b:  #stories
     graph.add_edge(b[i].title, b[i].moral)
     if b[i].stories is not None:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
-graph.tred()
+#graph.tred()
 graph.unflatten("-f -l1").layout()
 graph.write("book-1.dot")
 graph.draw("book-1.pdf")
