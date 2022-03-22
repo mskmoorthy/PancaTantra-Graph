@@ -9,10 +9,12 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(directed=True, name="book-1", orientation="landscape")
-graph.graph_attr["label"] = "Panchatantra"
-[graph.add_node(c[i].name, color=c[i].color, style="filled") for i in c]
-for i in b:
+graph = pgv.AGraph(directed=True,
+                   name="book-1",
+                   size="8,8",
+                   label="graphatantra")
+[graph.add_node(c[i].name, color=c[i].color, style="filled") for i in c]  #Cast
+for i in b:  #stories
     graph.add_edge(b[i].told_by, b[i].title)
     graph.add_edge(b[i].title, b[i].told_to)
     graph.add_edge(b[i].title, b[i].moral)
