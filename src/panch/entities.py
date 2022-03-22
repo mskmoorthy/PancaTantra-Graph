@@ -17,7 +17,6 @@ def stories_finalize(table):
 reader = csv.DictReader(open('cast-1.csv'), skipinitialspace=True)
 cast_1 = {row['name']: Character(**row) for row in reader}
 
-# stories: Holds all known Story instances:
 reader = csv.DictReader(open('book-1.csv'), skipinitialspace=True)
 book_1 = {row['index']: Story(**row) for row in reader}
 stories_finalize(book_1)

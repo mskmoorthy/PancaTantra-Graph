@@ -25,7 +25,13 @@ graphs. These should guide the data representation we choose.
 
   - classes.py :: Defines Character, Stories 
   - entities.py ::  Instantiates  --- Character, Story, ... from CSV data.
+  - graph.py  ::  Use pygraphviz API to draw graph for book-1
 
+
+*  Data Files
+
+  - cast-1.csv :: Cast Of characters in Book-1
+  - book-1.csv  ::  Stories from book-1.
 * Resources 
 
   - [[http://www.columbia.edu/itc/mealac/pritchett/00litlinks/panchatantra_ryder/index.html#book1][Panchatantra Columbia Press]]
