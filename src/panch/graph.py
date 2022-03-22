@@ -9,7 +9,7 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(directed=False,
+graph = pgv.AGraph(directed=True,
                    name="book-1",
                    size="8,8",
                    label="graphatantra")
