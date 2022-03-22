@@ -1,5 +1,5 @@
 """
-Draw Graphs  For Stories
+Draw Graphs  For Book-1
 """
 __author__ = "tv.raman.tv@gmail.com"
 
@@ -10,7 +10,7 @@ b = entities.book_1
 c = entities.cast_1
 
 graph = pgv.AGraph(directed=True, layout="circo", name="Panchatantra Book 1")
-graph.add_nodes_from([name for name in c])
+[graph.add_node(c[i].name, color=c[i].color) for i in c]
 for i in b:
     graph.add_edge(b[i].told_by, b[i].title)
     graph.add_edge(b[i].title, b[i].told_to)
