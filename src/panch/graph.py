@@ -9,7 +9,7 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(directed=True, name="book-1")
+graph = pgv.AGraph(directed=True, name="book-1", orientation="landscape")
 graph.graph_attr["label"] = "Panchatantra"
 [graph.add_node(c[i].name, color=c[i].color, style="filled") for i in c]
 for i in b:
