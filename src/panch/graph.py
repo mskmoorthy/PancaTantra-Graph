@@ -13,7 +13,7 @@ graph = pgv.AGraph(
     directed=True,
     name="book-1",
     #rankdir="lr",
-    size="8,8",
+    #size="8,8",
     label="graphatantra")
 [
     graph.add_node(c[i].name, color=c[i].color, style="filled", fontsize="8pt")
