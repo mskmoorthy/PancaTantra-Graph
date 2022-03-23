@@ -23,7 +23,7 @@ for i in b:  #stories
                    color="DeepSkyBlue",
                    shape="box",
                    fontsize="7pt")
-    graph.add_edge(b[i].told_by, b[i].title)
+    graph.add_edge(b[i].told_by, b[i].title, arrowhead="halfopen")
     graph.add_edge(b[i].title, b[i].told_to)
     graph.add_edge(b[i].title, b[i].moral)
     if b[i].stories is not None:
