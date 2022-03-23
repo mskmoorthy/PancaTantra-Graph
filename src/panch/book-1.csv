@@ -1,13 +1,13 @@
 index, title, told_by, told_to, moral, stories
-1,  "wedge-pulling monkey", "cautious", "crafty", "bright people avoid meddling"
-2,  "jackal and the war drum", "crafty", "rusty", "there are many sounds that do not warn of danger"
-3,  "merchant named able", "crafty", "lively", "always pay honour to a King’s people"
-4,  "pious and cheat", "crafty", "cautious", "money is hard to get and keeping it is harder still", "5 6"
-5,  "jackal at the ram fight", "crafty", "cautious", "excessive greed leads to being killed"
-6,  "weaver’s wife", "crafty", "cautious", "we all three cooked our own goose!"
-7,  "crow-hen and the black snake", "crafty", "cautious", "Where brute force cannot work, a shrewd device may", "8"
-8,  "heron who liked crabmeat", "a jackal", "a crow", "friends or enemies, everyone serves their own ends"
-9,  "arrogant and rabbit", "crafty", "cautious", "Where power joins with folly, the rabbit lives and the lion dies"
+1, "wedge-pulling monkey", "cautious", "crafty", "bright people avoid meddling"
+2, "jackal and the war drum", "crafty", "rusty", "there are many sounds that do not warn of danger"
+3, "merchant named able", "crafty", "lively", "always pay honour to a King’s people"
+4, "pious and cheat", "crafty", "cautious", "money is hard to get and keeping it is harder still", "5 6"
+5, "jackal at the ram fight", "crafty", "cautious", "excessive greed leads to being killed"
+6, "weaver’s wife", "crafty", "cautious", "we all three cooked our own goose!"
+7, "crow-hen and the black snake", "crafty", "cautious", "Where brute force cannot work, a shrewd device may", "8"
+8, "heron who liked crabmeat", "a jackal", "a crow", "friends or enemies, everyone serves their own ends"
+9, "arrogant and rabbit", "crafty", "cautious", "Where power joins with folly, the rabbit lives and the lion dies"
 10, "weaver who loved a princess", "crafty", "cautious", "Unceasing effort, not fate, brings success"
 11, "grateful animals and ungrateful man", "crafty", "rusty", "You must always listen to sound advice no matter who gives it"
 12, "leap and creep", "crafty", "rusty", "With no stranger share your house"
@@ -32,4 +32,4 @@ index, title, told_by, told_to, moral, stories
 31, "twin parrots, good and bad", "cautious", "crafty", "even brothers can become prime examples of good and bad education"
 32, "sensible foe", "cautious", "crafty", "When all is lost, the noble person tries to serve others even at his own expense"
 33, "foolish friend", "cautious", "crafty", "beware of making friends with fools and trusting them too much"
-34, "lion, bull, and two jackals", "sharma", "three princes", "friendship and villainy",1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+34, "lion, bull, and two jackals", "sharma", "three princes", "friendship and villainy",1 2 3 4 7 9 10 11 12 13 14 15 16 17 23 24 27 28 30 31 32 33
