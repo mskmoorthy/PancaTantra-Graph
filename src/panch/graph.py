@@ -14,6 +14,7 @@ graph = pgv.AGraph(directed=True,
                    size="8,8",
                    label="graphatantra")
 [graph.add_node(c[i].name, color=c[i].color, style="filled") for i in c]  #Cast
+graph.node_attr.update(color="SkyBlue", shape="box")
 for i in b:  #stories
     graph.add_edge(b[i].told_by, b[i].title)
     graph.add_edge(b[i].title, b[i].told_to)
