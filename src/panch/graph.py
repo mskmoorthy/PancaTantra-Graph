@@ -31,7 +31,7 @@ for i in b:  #stories
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
-graph.add_subgraph(animals, rank="same")
+graph.add_subgraph(animals, rank="same", name="main")
 graph.unflatten("-f -l1").layout()
 graph.write("book-1.dot")
 graph.draw("book-1.pdf")
