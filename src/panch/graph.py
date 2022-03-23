@@ -13,9 +13,12 @@ graph = pgv.AGraph(directed=True,
                    name="book-1",
                    size="8,8",
                    label="graphatantra")
-[graph.add_node(c[i].name, color=c[i].color, style="filled", fontsize=8pt) for i in c]  #Cast
+[
+    graph.add_node(c[i].name, color=c[i].color, style="filled", fontsize="8pt")
+    for i in c
+]  #Cast
 for i in b:  #stories
-    graph.add_node(b[i].title, color="SkyBlue", shape="box", fontsize=10tp)
+    graph.add_node(b[i].title, color="SkyBlue", shape="box", fontsize="10pt")
     graph.add_node(b[i].moral,
                    color="DeepSkyBlue",
                    shape="box",
