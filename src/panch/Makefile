@@ -1,4 +1,4 @@
-book-1.dot: graph.py entities.py classes.py cast-1.csv book-1.csv
+book-1.pdf: graph.py entities.py classes.py cast-1.csv book-1.csv
 	python3 graph.py
 	cat book-1.dot | gvcolor | dot -Tpdf -o book-1.pdf
 
