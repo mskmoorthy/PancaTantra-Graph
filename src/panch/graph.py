@@ -18,11 +18,8 @@ graph = pgv.AGraph(directed=True,
     for i in c
 ]  #Cast
 for i in b:  #stories
-    graph.add_node(b[i].title, color="SkyBlue", shape="box", fontsize="10pt")
-    graph.add_node(b[i].moral,
-                   color="DeepSkyBlue",
-                   shape="box",
-                   fontsize="7pt")
+    graph.add_node(b[i].title, shape="box", fontsize="10pt")
+    graph.add_node(b[i].moral, shape="box", fontsize="7pt")
     graph.add_edge(b[i].told_by, b[i].title)
     graph.add_edge(b[i].title, b[i].told_to)
     graph.add_edge(b[i].title, b[i].moral)
