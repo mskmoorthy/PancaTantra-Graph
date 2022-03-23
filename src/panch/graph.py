@@ -11,6 +11,7 @@ c = entities.cast_1
 
 graph = pgv.AGraph(directed=True,
                    name="book-1",
+                   rankdir="lr",
                    size="8,8",
                    label="graphatantra")
 [
