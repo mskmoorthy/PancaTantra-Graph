@@ -1,7 +1,8 @@
 * Use Cases
 
 This section enumerates the use-cases for which we want to generate
-graphs. These should guide the data representation we choose.
+graphs. These should guide the data representation we choose.  The
+goal is to generate multiple visualizations of the same data source.
 
 * System Design
 
@@ -15,7 +16,7 @@ graphs. These should guide the data representation we choose.
   - Instantiate objects by reading in CSV files. entities.py
   - Generate desired graphs from Python code that loads the data, then
     calls graphviz through the Python  API.
-  - Continuously validate data via utils in scratch.py.
+  - Continuously validate data via utils in utils.py.
   - In effect, small Python programs produce any given graph-view of
     what is in the data.
 
@@ -26,6 +27,7 @@ graphs. These should guide the data representation we choose.
   - classes.py :: Defines Character, Stories 
   - entities.py ::  Instantiates  --- Character, Story, ... from CSV data.
   - graph.py  ::  Use pygraphviz API to draw graph for book-1
+  - utils.py ::  Various data checkers 
 
 
 *  Data Files
