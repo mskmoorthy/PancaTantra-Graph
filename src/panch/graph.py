@@ -9,31 +9,27 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(
-    directed=True,
-    name="book-1",
-    #rankdir="lr",
-    #size="8,8",
-    label="graphatantra")
+graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 [
     graph.add_node(c[i].name, color=c[i].color, style="filled", fontsize="8pt")
     for i in c
-]  #Cast
-for i in b:  #stories
-    graph.add_node(b[i].title, color="SkyBlue", shape="box", fontsize="10pt")
-    graph.add_node(b[i].moral,
-                   color="DeepSkyBlue",
-                   shape="box",
-                   fontsize="7pt")
-    graph.add_edge(b[i].told_by, b[i].title)
-    graph.add_edge(b[i].title, b[i].told_to)
+]  #cast_1
+for i in b:
+    graph.add_node(b[i].title, shape="box", fontsize="10pt")
+    graph.add_node(b[i].moral, shape="box", fontsize="7pt")
+    ec = c[b[i].told_by].color
+    graph.add_edge(b[i].told_by, b[i].title, color=ec)
+    graph.add_edge(b[i].title, b[i].told_to, color=ec)
     graph.add_edge(b[i].title, b[i].moral, arrowhead="halfopen")
     if b[i].stories is not None:
-        [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
+        [
+            graph.add_edge(b[i].title, b[j].title, arrowshape="diamond")
+            for j in b[i].stories
+        ]  # contained stories
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
 # Rank explained: https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
 graph.add_subgraph(animals, rank="same", name="main")
-graph.unflatten("-f -l1").layout()
+graph.unflatten("-f -l3 -c 5").layout()
 graph.write("book-1.dot")
 graph.draw("book-1.pdf")
