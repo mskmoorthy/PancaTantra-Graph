@@ -32,6 +32,7 @@ for i in b:  #stories
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
+# Rank explained: https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
 graph.add_subgraph(animals, rank="same", name="main")
 graph.unflatten("-f -l1").layout()
 graph.write("book-1.dot")
