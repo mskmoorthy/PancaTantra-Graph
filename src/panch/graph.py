@@ -23,7 +23,7 @@ for i in b:
     graph.add_edge(b[i].title, b[i].moral, arrowhead="halfopen")
     if b[i].stories is not None:
         [
-            graph.add_edge(b[i].title, b[j].title, arrowshape="diamond")
+            graph.add_edge(b[i].title, b[j].title, arrowhead="diamond")
             for j in b[i].stories
         ]  # contained stories
 
