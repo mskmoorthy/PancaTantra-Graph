@@ -16,7 +16,7 @@ graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 ]  #cast_1
 for i in b:
     graph.add_node(b[i].title, shape="box", fontsize="10pt")
-    graph.add_node(b[i].moral, shape="box", fontsize="7pt")
+    graph.add_node(b[i].moral, shape="msquare", fontsize="7pt")
     ec = c[b[i].told_by].color
     graph.add_edge(b[i].told_by, b[i].title, color=ec)
     graph.add_edge(b[i].title, b[i].told_to, color=ec)
