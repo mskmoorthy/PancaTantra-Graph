@@ -29,10 +29,8 @@ for i in b:
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
 top = [b['34'].title, b['34'].told_by, b['34'].told_to]
-minors = [n for n in c if n not in animals]  # not used
-# Rank explained: https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
 graph.add_subgraph(top, rank="same", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
-graph.unflatten("-f -l3 -c 5").layout()
+graph.unflatten("-f -l3").layout()
 graph.write("book-1.dot")
 graph.draw("book-1.pdf")
