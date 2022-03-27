@@ -10,7 +10,7 @@ c = entities.cast_1
 graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 c_props = {"style": "filled, bold, solid", "fontsize": "8pt"}
 m_props = {
-    "fontsize": "7pt",
+    "fontsize": "6pt",
     "style": "dotted",
     "shape": "rectangle",
     "fontname": "times bold italic"
