@@ -14,11 +14,13 @@ def stories_finalize(table):
             s.stories = s.stories.split()
 
 
-reader = csv.DictReader(open('cast-1.csv'), skipinitialspace=True)
-cast_1 = {row['name']: Character(**row) for row in reader}
+with open('cast-1.csv', encoding='utf-8') as f:
+    reader = csv.DictReader(f, skipinitialspace=True)
+    cast_1 = {row['name']: Character(**row) for row in reader}
+with open('book-1.csv', encoding='utf-8') as f:
+    reader = csv.DictReader(f, skipinitialspace=True)
+    book_1 = {row['index']: Story(**row) for row in reader}
 
-reader = csv.DictReader(open('book-1.csv'), skipinitialspace=True)
-book_1 = {row['index']: Story(**row) for row in reader}
 stories_finalize(book_1)
 
 if __name__ == '__main__':
