@@ -11,7 +11,7 @@ graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 c_props = {"style": "filled, bold, solid", "fontsize": "8pt"}
 m_props = {
     "fontsize": "6pt",
-    "style": "dotted",
+    "style": "dotted, rounded",
     "shape": "rectangle",
     "fontname": "times bold italic"
 }
