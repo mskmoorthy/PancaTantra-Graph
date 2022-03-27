@@ -1,6 +1,4 @@
-"""
-Draw Graphs  For Book-1
-"""
+""" Panchatantra Graph """
 __author__ = "tv.raman.tv@gmail.com"
 
 import pygraphviz as pgv
