@@ -9,7 +9,7 @@ class DictInit:
 
     def __init__(self, **kwargs):
         for name in kwargs.keys():
-            if (name in self._fields):
+            if name in self._fields:
                 setattr(self, name, kwargs[name])
             else:
                 raise TypeError('Illegal field: {}'.format(name))
@@ -34,7 +34,7 @@ class Story(DictInit):
             try:
                 v = getattr(self, f)
                 print(f)
-                if (f == 'cast'):
+                if f == 'cast':
                     [c.show() for c in v]
                 else:
                     print(v)
