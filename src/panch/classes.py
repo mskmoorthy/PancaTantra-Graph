@@ -24,8 +24,6 @@ class Story(DictInit):
         'told_to',
         'moral',
         'stories',
-        'url',
-        'cast',
     ]
 
     def show(self):
