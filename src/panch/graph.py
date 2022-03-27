@@ -11,7 +11,7 @@ c = entities.cast_1
 
 graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 c_props = {"style": "filled", "fontsize": "8pt"}
-[graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]  #cast_1
+[graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
     m_props = {"shape": "rectangle", "fontsize": "7pt", "style": "dotted"}
