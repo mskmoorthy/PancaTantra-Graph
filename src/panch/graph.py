@@ -10,7 +10,7 @@ c = entities.cast_1
 graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 c_props = {"style": "filled, bold, solid", "fontsize": "8pt"}
 m_props = {"shape": "rectangle", "fontsize": "7pt", "style": "dotted"}
-e_props = {"carrowhead": "halfopen"}
+tm_props = {"carrowhead": "halfopen"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
@@ -18,7 +18,7 @@ for i in b:
     graph.add_node(b[i].moral, color=ec, **m_props)
     graph.add_edge(b[i].told_by, b[i].title, color=ec)
     graph.add_edge(b[i].title, b[i].told_to, color=ec)
-    graph.add_edge(b[i].title, b[i].moral, color=ec, **e_props)
+    graph.add_edge(b[i].title, b[i].moral, color=ec, **tm_props)
     if b[i].stories is not None:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
