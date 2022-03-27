@@ -5,7 +5,7 @@ __author__ = "tv.raman.tv@gmail.com"
 
 import pygraphviz as pgv
 import entities
-# aliases
+
 b = entities.book_1
 c = entities.cast_1
 
