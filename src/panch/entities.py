@@ -2,14 +2,14 @@
 Instances that make up the Panchatantra: Story, Character
 """
 __author__ = "tv.raman.tv@gmail.com"
-from classes import Story, Character
 import csv
+from classes import Story, Character
 
 
 def stories_finalize(table):
     "Post process stories in table."
-    for id in table:
-        s = table[id]
+    for i in table:
+        s = table[i]
         if isinstance(s.stories, str):
             s.stories = s.stories.split()
 
