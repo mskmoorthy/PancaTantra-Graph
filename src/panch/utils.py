@@ -28,11 +28,16 @@ def report(g):
     "Show interesting facts from our graph."
     b = entities.book_1
     c = entities.cast_1
-    l = g.degree_iter([n for n in c])
-    [print(i) for i in l]
+    print("Cast: Degrees")
+    c_iter = g.degree_iter([n for n in c])
+    [print(i) for i in c_iter]
+    b_iter = g.degree_iter([b[n].title for n in b])
+    print("Book: Degrees")
+    [print(i) for i in b_iter]
 
 
 if __name__ == '__main__':
     print("Missing Cast Members", cast_missing())
     print("Missing stories", stories_missing())
     print("Extra Cast Members", cast_extra())
+    report(graph.graph)
