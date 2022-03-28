@@ -1,7 +1,8 @@
-# Scratchpad for trying out short code snippets
+# Utils: Scratchpad for trying out short code snippets
 __author__ = "tv.raman.tv@gmail.com"
 
 import entities
+import graph
 
 
 # Missing characters in cast:
@@ -23,6 +24,15 @@ def stories_missing():
     [i for i in entities.book_1['34'].stories if i not in entities.book_1]
 
 
-print("Missing Cast Members", cast_missing())
-print("Missing stories", stories_missing())
-print("Extra Cast Members", cast_extra())
+def report(g):
+    "Show interesting facts from our graph."
+    b = entities.book_1
+    c = entities.cast_1
+    l = g.degree_iter([n for n in c])
+    [print(i) for i in l]
+
+
+if __name__ == '__main__':
+    print("Missing Cast Members", cast_missing())
+    print("Missing stories", stories_missing())
+    print("Extra Cast Members", cast_extra())
