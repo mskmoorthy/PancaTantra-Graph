@@ -31,6 +31,8 @@ animals = ['rusty', 'lively', 'crafty', 'cautious']
 top = [b['34'].title, b['34'].told_by, b['34'].told_to]
 graph.add_subgraph(top, rank="same", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
-graph.unflatten("-f -l3").layout()
-graph.write("book-1.dot")
-graph.draw("book-1.pdf")
+
+if __name__ == '__main__':
+    graph.unflatten("-f -l3").layout()
+    graph.write("book-1.dot")
+    graph.draw("book-1.pdf")
