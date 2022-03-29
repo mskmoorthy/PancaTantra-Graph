@@ -5,7 +5,6 @@ import entities
 import graph
 
 
-# Missing characters in cast:
 def cast_extra():
     "identify redundant cast members"
     s = entities.book_1
