@@ -16,7 +16,7 @@ m_props = {
     "fontname": "times bold italic"
 }
 tm_props = {"carrowhead": "filled"}
-i_props = {"style": "dotted", "rank": "same"}
+i_props = {"style": "dashed", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
@@ -29,7 +29,7 @@ for i in b:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
-top = [b['34'].title, b['34'].told_by, b['34'].told_to]
+top = [b['34'].title, b['34'].told_by, b['34'].told_to, b['34'].moral]
 inner = [
     b[i].stories for i in b
     if b[i].stories is not None and len(b[i].stories) > 1
