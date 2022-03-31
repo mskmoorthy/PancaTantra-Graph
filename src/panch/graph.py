@@ -37,7 +37,7 @@ inner = [
 graph.add_subgraph(top, rank="same", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
 for i in range(len(inner)):
-    graph.add_subgraph(inner[i], name="innner_{}".format(i), rank="same")
+    graph.add_subgraph(inner[i], name="inner_{}".format(i), rank="same")
 
 
 def main():
