@@ -45,7 +45,6 @@ def main():
     "DDraw the graph"
     graph.unflatten("-f -l3").layout()
     graph.write("book-1.dot")
-    graph.draw("book-1.pdf")
 
 
 if __name__ == '__main__':
