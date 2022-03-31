@@ -16,6 +16,7 @@ m_props = {
     "fontname": "times bold italic"
 }
 tm_props = {"carrowhead": "filled"}
+i_props = {"style": "dotted", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
@@ -37,7 +38,7 @@ inner = [
 graph.add_subgraph(top, rank="same", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
 for i in range(len(inner)):
-    graph.add_subgraph(inner[i], name="inner_{}".format(i), rank="same")
+    graph.add_subgraph(inner[i], name="inner_{}".format(i), **i_props)
 
 
 def main():
