@@ -41,5 +41,19 @@ goal is to generate multiple visualizations of the same data source.
   - [[https://www.gutenberg.org/files/25545/25545-h/25545-h.htm][Gutenberg: Children's Literature]]
   - [[https://archive.org/stream/Panchatantra_Arthur_W_Ryder/Panchatantra%20-%20Arthur%20W%20Ryder_djvu.txt][Internet Archive: Panchatantra: Arthur Ryder]]
   - [[https://www.amazon.com/Books-Narindar-Uberoi-Kelly/s?rh=n%3A283155%2Cp_27%3ANarindar+Uberoi+Kelly][Panchatantra]]
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:nil todo:t |:t
+#+title: Design: Graphatantra
+#+date: <2022-03-31 Thu>
+#+author: T.V Raman
+#+email: raman@google.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 29.0.50 (Org mode 9.5.2)
+#+cite_export:
 
 
