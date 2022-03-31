@@ -15,8 +15,9 @@ goal is to generate multiple visualizations of the same data source.
     data. Character, Story (classes.py)
   - Instantiate objects by reading in CSV files. entities.py
   - Generate desired graphs from Python code that loads the data, then
-    calls graphviz through the Python  API.
+    calls graphviz through the Python  API.  graph.py
   - Continuously validate data via utils in utils.py.
+  - Produce PDF files using the various graphviz layout engines. Makefile
   - In effect, small Python programs produce any given graph-view of
     what is in the data.
 
