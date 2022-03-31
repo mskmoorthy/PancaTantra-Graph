@@ -29,10 +29,23 @@ for i in b:
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
 top = [b['34'].title, b['34'].told_by, b['34'].told_to]
+inner = [
+    b[i].stories for i in b
+    if b[i].stories is not None and len(b[i].stories) > 1
+]
+
 graph.add_subgraph(top, rank="same", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
+for i in range(len(inner)):
+    graph.add_subgraph(inner[i], name="innner_{}".format(i), rank="same")
 
-if __name__ == '__main__':
+
+def main():
+    "DDraw the graph"
     graph.unflatten("-f -l3").layout()
     graph.write("book-1.dot")
     graph.draw("book-1.pdf")
+
+
+if __name__ == '__main__':
+    main()
