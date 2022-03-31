@@ -5,7 +5,7 @@ all: graph.py entities.py cast-1.csv book-1.csv
 	$(foreach p,${PROGS},$p book-1.dot |gvcolor | $p -Tpdf -o $p-book-1.pdf;)
 
 clean:
-	rm -f book-1.dot book-1.pdf
+	rm -f book-1.dot  *.pdf
 
 test: classes.py  entities.py utils.py
 	python classes.py
