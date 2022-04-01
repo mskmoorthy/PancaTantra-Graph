@@ -9,6 +9,7 @@ c = entities.cast_1
 
 graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
 c_props = {"style": "filled, bold", "fontsize": "8pt"}
+t_props = {"shape": "box", "fontsize": "10pt", "style": "filled"}
 m_props = {
     "fontsize": "6pt",
     "style": "dotted, rounded",
@@ -20,7 +21,7 @@ i_props = {"style": "dashed", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
-    graph.add_node(b[i].title, shape="box", fontsize="10pt", style="filled")
+    graph.add_node(b[i].title, color=ec, **t_props)
     graph.add_node(b[i].moral, color=ec, **m_props)
     graph.add_edge(b[i].told_by, b[i].title, color=ec)
     graph.add_edge(b[i].title, b[i].told_to, color=ec)
