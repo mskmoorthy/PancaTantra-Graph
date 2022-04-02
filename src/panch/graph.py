@@ -35,6 +35,8 @@ inner = [
     b[i].stories for i in b
     if b[i].stories is not None and len(b[i].stories) > 1
 ]
+# Rank explained:
+# https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
 
 graph.add_subgraph(top, rank="source", name="outer")
 graph.add_subgraph(animals, rank="same", name="main")
