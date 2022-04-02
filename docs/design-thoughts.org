@@ -50,7 +50,7 @@ goal is to generate multiple visualizations of the same data source.
 
   - Node colors help quickly locate  main characters.
   - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
-  - Primary edges are colored in the color of the character who tells
+  - Primary edges are colored in the color of the character who narrates
     a given  story.
   - In-degree and out-degree of edges of a specific color at a node
     reveals stories told-by or told-to a given character.
