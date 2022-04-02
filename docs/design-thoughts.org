@@ -35,8 +35,39 @@ goal is to generate multiple visualizations of the same data source.
 
   - cast-1.csv :: Cast Of characters in Book-1
   - book-1.csv  ::  Stories from book-1.
-* Resources 
 
+
+* Lessons Learned 
+
+  - Graphviz layout engines generate different perspectives on the
+  same graph structure.
+  - The graph produced by _graph.py_ can answer many types of
+    questions about the structure and relationships among the
+    stories in the Panchatantra at a glance.
+
+
+**  Panchatantra Insights At A Glance From The Graph 
+
+  - Node colors help quickly locate  main characters.
+  - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
+  - Primary edges are colored in the color of the character who tells
+    a given  story.
+  - In-degree and out-degree of edges of a specific color at a node
+    reveals stories told-by or told-to a given character.
+  - Edges from Title nodes to Moral nodes highlights insights for each story.
+    - Nested stories are grouped as children of the containing story.
+    - Fill-style distinguishes Title nodes from Moral nodes.
+    - The underlying semantics present in the structure of the book is
+      conveyed to Graphviz via subgraphs with appropriate ~rank~
+      values e.g. _rank=source_ to influce the order in which nodes
+      are laid out.
+    - Notice the call to _unflatten_ in graph.py to create more space
+      between the nodes for clarity.
+
+
+* Resources 
+  - [[https://graphviz.org/documentation/][Graphviz Manual]]
+  - [[https://pygraphviz.github.io/documentation/stable/pygraphviz.pdf][PyGraphviz Manual]]
   - [[http://www.columbia.edu/itc/mealac/pritchett/00litlinks/panchatantra_ryder/index.html#book1][Panchatantra Columbia Press]]
   - [[https://www.gutenberg.org/files/25545/25545-h/25545-h.htm][Gutenberg: Children's Literature]]
   - [[https://archive.org/stream/Panchatantra_Arthur_W_Ryder/Panchatantra%20-%20Arthur%20W%20Ryder_djvu.txt][Internet Archive: Panchatantra: Arthur Ryder]]
