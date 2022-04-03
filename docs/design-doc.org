@@ -46,7 +46,13 @@ goal is to generate multiple visualizations of the same data source.
     stories in the Panchatantra at a glance.
 
 
-**  Panchatantra Insights At A Glance From The Graph 
+**  Panchatantra Insights At A Glance 
+
+
+The graph makes the  following self-evident; in that sense, think of
+the graph as a visual database that is optimized for the human eye ---
+a visual search engine.
+
 
   - Node colors help quickly locate  main characters.
   - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
