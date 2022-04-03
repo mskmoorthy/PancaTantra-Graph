@@ -52,17 +52,17 @@ goal is to generate multiple visualizations of the same data source.
   - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
   - Primary edges are colored in the color of the character who narrates
     a given  story.
+  - Rusty narrates no stories, as is evident from the absence of *red* edges.
   - In-degree and out-degree of edges of a specific color at a node
     reveals stories told-by or told-to a given character.
   - Edges from Title nodes to Moral nodes highlights insights for each story.
-    - Nested stories are grouped as children of the containing story.
-    - Fill-style distinguishes Title nodes from Moral nodes.
-    - The underlying semantics present in the structure of the book is
-      conveyed to Graphviz via subgraphs with appropriate ~rank~
-      values e.g. _rank=source_ to influce the order in which nodes
-      are laid out.
-    - Notice the call to _unflatten_ in graph.py to create more space
-      between the nodes for clarity.
+  - Nested stories are grouped as children of the containing story.
+  - Fill-style distinguishes Title nodes from Moral nodes.
+  - The underlying semantics present in the structure of the book is
+    conveyed to Graphviz via subgraphs with appropriate ~rank~ values
+    e.g. _rank=source_ to influce the order in which nodes are laid out.
+  - Notice the call to _unflatten_ in graph.py to create more space
+    between the nodes for clarity.
 
 
 * Resources 
