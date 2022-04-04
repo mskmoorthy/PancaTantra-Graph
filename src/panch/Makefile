@@ -1,4 +1,4 @@
-PROGS:=dot twopi circo patchwork osage
+PROGS:=dot twopi circo patchwork osage neato
   
 all: graph.py entities.py cast-1.csv book-1.csv
 	python graph.py	
