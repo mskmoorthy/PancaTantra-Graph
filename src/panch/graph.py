@@ -21,8 +21,8 @@ i_props = {"style": "dashed", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in b:
     ec = c[b[i].told_by].color
-    n_title = "{}: {}".format(i, b[i].title)
-    graph.add_node(n_title, color=ec, **t_props)
+    s_label = "{}: {}".format(i, b[i].title)
+    graph.add_node(b[i].title, label=s_label, color=ec, **t_props)
     graph.add_node(b[i].moral, color=ec, **m_props)
     graph.add_edge(b[i].told_by, b[i].title, color=ec)
     graph.add_edge(b[i].title, b[i].told_to, color=ec)
