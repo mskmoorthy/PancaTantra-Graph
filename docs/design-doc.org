@@ -55,6 +55,9 @@ a visual search engine.
 
 
   - Node colors help quickly locate  main characters.
+  - Stories are numbered 0..33, and help guide the eye through the
+    stories in the order in which they occur, with _0_ being the main
+    story.
   - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
   - Primary edges are colored in the color of the character who narrates
     a given  story.
@@ -69,6 +72,11 @@ a visual search engine.
     e.g. _rank=source_ to influce the order in which nodes are laid out.
   - Notice the call to _unflatten_ in graph.py to create more space
     between the nodes for clarity.
+  - Graphviz comes with a number of layout engines; after
+    experimenting, we discover that for this particular task, _twopi_
+    with its radial layout appears to work well; the resulting graph
+    is approx 11X11in --- as opposed to the default layout produced by
+    _dot_ which is over 70in wide!
 
 
 * Resources 
