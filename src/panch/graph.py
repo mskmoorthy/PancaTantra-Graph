@@ -31,7 +31,7 @@ for i in b:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
-top = [b['34'].title, b['34'].told_by, b['34'].told_to, b['34'].moral]
+top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 inner = [
     b[i].stories for i in b
     if b[i].stories is not None and len(b[i].stories) > 1
