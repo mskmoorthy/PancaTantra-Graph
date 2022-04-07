@@ -7,14 +7,17 @@ goal is to generate multiple visualizations of the same data source.
 * System Design
 
   - Pick a declarative representation for the story facts we
-    capture. (CSV) at present.
+    capture --- CSV.
   - Representation should be independent of visual artifacts needed to
     draw graphs.
   - CSV data captures metadata.
+  - Data: cast-1.csv: Cast of characters for Book 1; book-1.csv: Story
+    metadata for book-1.
   - Design data structures  (Python Classes) to hold this
     data. Character, Story (classes.py)
   - Instantiate objects by reading in CSV files. entities.py
-  - Generate desired graphs from Python code that loads the data, then
+  - Generate desired graphs from Python code that loads the data by
+    importing module _entities_, then
     calls graphviz through the Python  API.  graph.py
   - Continuously validate data via utils in utils.py.
   - Produce PDF files using the various graphviz layout engines. Makefile
@@ -59,7 +62,7 @@ a visual search engine.
     stories in the order in which they occur, with _0_ being the main
     story.
   - Primary colors for Rusty, Lively, Crafty and Cautious draw the  eye.
-  - Primary edges are colored in the color of the character who narrates
+  - Main  edges use   the color of the character who narrates
     a given  story.
   - Rusty narrates no stories, as is evident from the absence of *red* edges.
   - In-degree and out-degree of edges of a specific color at a node
