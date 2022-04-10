@@ -20,7 +20,7 @@ def cast_missing():
 
 
 def stories_missing():
-    [i for i in entities.book_1['34'].stories if i not in entities.book_1]
+    [i for i in entities.book_1['0'].stories if i not in entities.book_1]
 
 
 def report(g):
