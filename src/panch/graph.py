@@ -19,7 +19,7 @@ m_props = {
 tm_props = {"carrowhead": "filled"}
 i_props = {"style": "dashed", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
-for i in b:
+for i in sorted(b, key=int):
     ec = c[b[i].told_by].color
     s_label = "{}: {}".format(i, b[i].title)
     graph.add_node(b[i].title, label=s_label, color=ec, **t_props)
