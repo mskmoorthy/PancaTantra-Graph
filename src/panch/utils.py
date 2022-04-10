@@ -40,3 +40,15 @@ if __name__ == '__main__':
     print("Missing stories", stories_missing())
     print("Extra Cast Members", cast_extra())
     report(graph.graph)
+
+
+def moral_len():
+    "Show length of morals."
+    m = [entities.book_1[i].moral for i in entities.book_1]
+    [print(len(i), ": ", i) for i in sorted(m, key=len)]
+
+
+def title_len():
+    "Show length of titles."
+    m = [entities.book_1[i].title for i in entities.book_1]
+    [print(len(i), ": ", i) for i in sorted(m, key=len)]
