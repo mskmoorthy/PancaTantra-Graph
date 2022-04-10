@@ -32,8 +32,6 @@ class Story(DictInit):
             try:
                 v = getattr(self, f)
                 print(f, ": ", v)
-                if f == 'cast':
-                    [c.show() for c in v]
             except AttributeError:
                 pass
 

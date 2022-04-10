@@ -35,20 +35,24 @@ def report(g):
     [print(i) for i in b_iter]
 
 
-if __name__ == '__main__':
-    print("Missing Cast Members", cast_missing())
-    print("Missing stories", stories_missing())
-    print("Extra Cast Members", cast_extra())
-    report(graph.graph)
-
-
 def moral_len():
     "Show length of morals."
+    print("Moral Lengths")
     m = [entities.book_1[i].moral for i in entities.book_1]
     [print(len(i), ": ", i) for i in sorted(m, key=len)]
 
 
 def title_len():
     "Show length of titles."
+    print("Title Lengths")
     m = [entities.book_1[i].title for i in entities.book_1]
     [print(len(i), ": ", i) for i in sorted(m, key=len)]
+
+
+if __name__ == '__main__':
+    print("Missing Cast Members", cast_missing())
+    print("Missing stories", stories_missing())
+    print("Extra Cast Members", cast_extra())
+    moral_len()
+    title_len()
+    report(graph.graph)
