@@ -31,11 +31,9 @@ class Story(DictInit):
         for f in self._fields:
             try:
                 v = getattr(self, f)
-                print(f)
+                print(f, ": ", v)
                 if f == 'cast':
                     [c.show() for c in v]
-                else:
-                    print(v)
             except AttributeError:
                 pass
 
