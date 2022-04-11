@@ -31,7 +31,8 @@ class Story(DictInit):
         for f in self._fields:
             try:
                 v = getattr(self, f)
-                print(f, ": ", v)
+                if v is not None:
+                    print(f, ": ", v)
             except AttributeError:
                 pass
 
