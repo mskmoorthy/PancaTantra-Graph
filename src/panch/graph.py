@@ -17,7 +17,7 @@ m_props = {
     "fontsize": "6pt",
     "style": "dotted, rounded",
     "shape": "rectangle",
-    "fontname": "helvetica bold"
+    "fontname": "helvetica italic"
 }
 tm_props = {"carrowhead": "filled"}
 i_props = {"style": "dashed", "rank": "same"}
