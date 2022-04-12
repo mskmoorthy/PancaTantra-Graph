@@ -7,14 +7,17 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-graph = pgv.AGraph(directed=True, name="book-1", label="graphatantra")
+graph = pgv.AGraph(directed=True,
+                   name="book-1",
+                   label="graphatantra",
+                   fontname="helvetica")
 c_props = {"style": "filled, bold", "fontsize": "8pt"}
 t_props = {"shape": "box", "fontsize": "8pt", "style": "filled"}
 m_props = {
     "fontsize": "6pt",
     "style": "dotted, rounded",
     "shape": "rectangle",
-    "fontname": "times bold italic"
+    "fontname": "helvetica bold"
 }
 tm_props = {"carrowhead": "filled"}
 i_props = {"style": "dashed", "rank": "same"}
