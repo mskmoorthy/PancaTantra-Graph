@@ -30,7 +30,7 @@ for i in sorted(b, key=int):
     graph.add_edge(b[i].told_by, b[i].title, color=ec)
     graph.add_edge(b[i].title, b[i].told_to, color=ec)
     graph.add_edge(b[i].title, b[i].moral, color=ec, **tm_props)
-    if b[i].stories is not None and i != '0':
+    if b[i].stories is not None:
         [graph.add_edge(b[i].title, b[j].title) for j in b[i].stories]
 
 animals = ['rusty', 'lively', 'crafty', 'cautious']
