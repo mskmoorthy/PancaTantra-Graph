@@ -11,16 +11,15 @@ graph = pgv.AGraph(directed=True,
                    name="book-1",
                    label="graphatantra",
                    fontname="helvetica")
-c_props = {"style": "filled, bold", "fontsize": "8pt"}
-t_props = {"shape": "box", "fontsize": "8pt", "style": "filled"}
+c_props = {"style": "filled, bold", "fontsize": "6pt"}
+t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}
 m_props = {
     "fontsize": "6pt",
-    "style": "dotted, rounded",
+    "style": "dotted",
     "shape": "rectangle",
     "fontname": "helvetica italic"
 }
 tm_props = {"carrowhead": "filled"}
-i_props = {"style": "dashed", "rank": "same"}
 [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
 for i in sorted(b, key=int):
     ec = c[b[i].told_by].color
