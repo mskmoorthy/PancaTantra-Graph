@@ -41,7 +41,7 @@ animals = ['rusty', 'lively', 'crafty', 'cautious']
 top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 # Rank explained:
 # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
-graph.add_subgraph(top, rank="same", name="outer")
+graph.add_subgraph(top, rank="same", name="outer", bgcolor="gray:")
 graph.add_subgraph(animals, rank="source", name="main")
 
 
