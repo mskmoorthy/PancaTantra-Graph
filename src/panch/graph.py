@@ -13,7 +13,11 @@ graph = pgv.AGraph(directed=True,
                    fontname="helvetica")
 c_props = {"style": "filled, bold", "fontsize": "6pt"}
 t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}
-i_props = {"style": "dashed", "rank": "same", "bgcolor": "gray:silver"}
+i_props = {
+    "style": "dashed,radial",
+    "rank": "same",
+    "bgcolor": "CornflowerBlue:PaleGoldenrod"
+}
 m_props = {
     "fontsize": "6pt",
     "style": "dotted",
