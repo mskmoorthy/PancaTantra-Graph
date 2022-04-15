@@ -55,4 +55,3 @@ if __name__ == '__main__':
     print("Extra Cast Members", cast_extra())
     moral_len()
     title_len()
-    report(graph.graph)
