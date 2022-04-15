@@ -7,7 +7,7 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-c_props = {"style": "filled, bold", "fontsize": "6pt"}  #cast_1
+c_props = {"style": "filled, bold", "fontsize": "6pt"}  #cast
 t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}  #book
 i_props = {  #inner subgraph
     "style": "dashed,radial",
