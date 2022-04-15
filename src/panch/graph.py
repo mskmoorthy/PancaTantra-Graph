@@ -7,40 +7,26 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-c_props = {"style": "filled, bold", "fontsize": "6pt"}
-t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}
-i_props = {
+c_props = {"style": "filled, bold", "fontsize": "6pt"}  #cast_1
+t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}  #book
+i_props = {  #inner subgraph
     "style": "dashed,radial",
     "rank": "same",
     "bgcolor": "CornflowerBlue:PaleGoldenrod"
 }
-m_props = {
+m_props = {  #moral
     "fontsize": "6pt",
     "style": "dotted",
     "shape": "rectangle",
     "fontname": "helvetica italic"
 }
-tm_props = {"carrowhead": "filled"}
-g_props = {"label": "graphatantra", "fontname": "helvetica"}
+tm_props = {"carrowhead": "filled"}  #title->moral
+g_props = {"label": "graphatantra", "fontname": "helvetica"}  #graph
 
 
 def graph_a():
     "Version A. Morals are nodes."
     graph = pgv.AGraph(directed=True, name="book-1a", **g_props)
-    c_props = {"style": "filled, bold", "fontsize": "6pt"}
-    t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}
-    i_props = {
-        "style": "dashed,radial",
-        "rank": "same",
-        "bgcolor": "CornflowerBlue:PaleGoldenrod"
-    }
-    m_props = {
-        "fontsize": "6pt",
-        "style": "dotted",
-        "shape": "rectangle",
-        "fontname": "helvetica italic"
-    }
-    tm_props = {"carrowhead": "filled"}
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
         ec = c[b[i].told_by].color
