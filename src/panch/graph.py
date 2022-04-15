@@ -13,6 +13,7 @@ graph = pgv.AGraph(directed=True,
                    fontname="helvetica")
 c_props = {"style": "filled, bold", "fontsize": "6pt"}
 t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}
+i_props = {"style": "dashed", "rank": "same", "bgcolor": "gray:silver"}
 m_props = {
     "fontsize": "6pt",
     "style": "dotted",
@@ -37,12 +38,17 @@ for i in sorted(b, key=int):
                            style="dotted") for j in b[i].stories
         ]
 
+inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
+
 animals = ['rusty', 'lively', 'crafty', 'cautious']
 top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 # Rank explained:
 # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
 graph.add_subgraph(top, rank="same", name="outer", bgcolor="gray:")
 graph.add_subgraph(animals, rank="source", name="main")
+for i in range(len(inner)):
+    subtitles = [b[j].title for j in inner[i]]
+    graph.add_subgraph(subtitles, name="inner_{}".format(i), **i_props)
 
 
 def main():
