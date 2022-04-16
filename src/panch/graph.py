@@ -60,9 +60,9 @@ def graph_a():
                        name="cluster_outer",
                        bgcolor="LightGray:PaleTurquoise")
     graph.add_subgraph(animals,
-                       label="Animals",
+                       label="Cast",
                        rank="source",
-                       name="cluster_main",
+                       name="cluster_cast",
                        bgcolor="LightBlue:LightGray")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
@@ -99,9 +99,9 @@ def graph_b():
     # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
     graph.add_subgraph(top,
                        rank="same",
-                       name="outer",
+                       name="cluster_outer",
                        bgcolor="LightGray:PaleTurquoise")
-    graph.add_subgraph(animals, rank="source", name="main")
+    graph.add_subgraph(animals, rank="source", name="cluster_cast")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
         graph.add_subgraph(subtitles, name="cluster_{}".format(i), **i_props)
