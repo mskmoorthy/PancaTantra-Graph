@@ -16,12 +16,12 @@ i_props = {  #inner subgraph
 }
 m_props = {  #moral
     "fontsize": "6pt",
-    "style": "dotted",
+    "style": "striped",
     "shape": "rectangle",
     "fontname": "helvetica italic"
 }
 tm_props = {"carrowhead": "filled"}  #title->moral
-g_props = {"label": "graphatantra", "fontname": "helvetica"}  #graph
+g_props = {"fontname": "helvetica"}  #graph
 
 
 def graph_a():
@@ -57,9 +57,12 @@ def graph_a():
     # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
     graph.add_subgraph(top,
                        rank="same",
-                       name="outer",
+                       name="cluster_outer",
                        bgcolor="LightGray:PaleTurquoise")
-    graph.add_subgraph(animals, rank="source", name="main")
+    graph.add_subgraph(animals,
+                       rank="source",
+                       name="cluster_main",
+                       bgcolor="LightBlue:LightGray")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
         graph.add_subgraph(subtitles, name="cluster_{}".format(i), **i_props)
