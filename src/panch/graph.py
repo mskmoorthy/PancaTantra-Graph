@@ -42,7 +42,10 @@ def graph_a():
                 for j in b[i].stories
             ]
 
-    inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
+    inner = [
+        b[i].stories for i in b
+        if i != '0' and b[i].stories is not None and len(b[i].stories) > 1
+    ]
 
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
@@ -105,7 +108,7 @@ def graph_b():
 def main():
     "DDraw the graphs"
     graph_a()
-    graph_b()
+    #graph_b()
 
 
 if __name__ == '__main__':
