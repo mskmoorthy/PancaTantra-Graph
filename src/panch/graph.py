@@ -55,7 +55,7 @@ def graph_a():
     graph.add_subgraph(animals, rank="source", name="main")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
-        graph.add_subgraph(subtitles, name="inner_{}".format(i), **i_props)
+        graph.add_subgraph(subtitles, name="cluster_{}".format(i), **i_props)
     graph.unflatten("-f -l3").layout()
     graph.write("book-1a.dot")
 
@@ -89,7 +89,7 @@ def graph_b():
     graph.add_subgraph(animals, rank="source", name="main")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
-        graph.add_subgraph(subtitles, name="inner_{}".format(i), **i_props)
+        graph.add_subgraph(subtitles, name="cluster_{}".format(i), **i_props)
     graph.unflatten("-f -l3").layout()
     graph.write("book-1b.dot")
 
