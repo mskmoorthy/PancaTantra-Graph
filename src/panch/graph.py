@@ -60,6 +60,7 @@ def graph_a():
                        name="cluster_outer",
                        bgcolor="LightGray:PaleTurquoise")
     graph.add_subgraph(animals,
+                       label="Animals",
                        rank="source",
                        name="cluster_main",
                        bgcolor="LightBlue:LightGray")
