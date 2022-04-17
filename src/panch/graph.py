@@ -74,7 +74,7 @@ def graph_a():
         inner_by_to += [b[j].told_to for j in inner[i]]
         graph.add_subgraph(subtitles + inner_by_to,
                            name="cluster_{}".format(i),
-                           label="Framed {}".format(i),
+                           label="Frame {}".format(i),
                            **i_props)
     # graph.add_subgraph(crafty, name="cluster_crafty")
     # graph.add_subgraph(cautious, name="cluster_cautious")
