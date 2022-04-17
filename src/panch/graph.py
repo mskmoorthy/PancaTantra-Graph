@@ -21,7 +21,11 @@ m_props = {  # moral
     "fontname": "helvetica italic"
 }
 tm_props = {"carrowhead": "filled"}  # title->moral
-g_props = {"label": "Graphatantra", "fontname": "helvetica"}  # graph
+g_props = {
+    "label": "Graphatantra",
+    "fontname": "helvetica",
+    "outputMode": "nodesfirst",
+}  # graph
 
 
 def graph_a():
