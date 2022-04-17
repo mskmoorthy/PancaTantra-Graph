@@ -25,6 +25,7 @@ g_props = {
     "label": "Graphatantra",
     "fontname": "helvetica",
     "outputMode": "nodesfirst",
+    "outputorder": "nodesfirst",
 }  # graph
 
 
