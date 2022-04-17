@@ -64,7 +64,6 @@ def graph_a():
                        bgcolor="LightBlue:LightGray")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
-        # inner_to_by will have duplicates
         inner_by_to = [b[j].told_by for j in inner[i]]
         inner_by_to += [b[j].told_to for j in inner[i]]
         graph.add_subgraph(subtitles + inner_by_to,
