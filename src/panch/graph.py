@@ -17,7 +17,6 @@ i_props = {  # inner subgraph
 m_props = {  # moral
     "fontsize": "6pt",
     "style": "striped",
-    "shape": "rectangle",
     "fontname": "helvetica italic"
 }
 tm_props = {"carrowhead": "filled"}  # title->moral
