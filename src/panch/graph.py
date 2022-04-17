@@ -7,21 +7,21 @@ import entities
 b = entities.book_1
 c = entities.cast_1
 
-c_props = {"style": "filled, bold", "fontsize": "6pt"}  #cast
-t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}  #book
-i_props = {  #inner subgraph
+c_props = {"style": "filled, bold", "fontsize": "6pt"}  # cast
+t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}  # book
+i_props = {  # inner subgraph
     "style": "dashed,radial",
     "rank": "same",
     "bgcolor": "CornflowerBlue:PaleGoldenrod"
 }
-m_props = {  #moral
+m_props = {  # moral
     "fontsize": "6pt",
     "style": "striped",
     "shape": "rectangle",
     "fontname": "helvetica italic"
 }
-tm_props = {"carrowhead": "filled"}  #title->moral
-g_props = {"label": "Graphatantra", "fontname": "helvetica"}  #graph
+tm_props = {"carrowhead": "filled"}  # title->moral
+g_props = {"label": "Graphatantra", "fontname": "helvetica"}  # graph
 
 
 def graph_a():
@@ -42,19 +42,16 @@ def graph_a():
                 for j in b[i].stories
             ]
 
-    inner = [
-        b[i].stories for i in b
-        if i != '0' and b[i].stories is not None and len(b[i].stories) > 1
-    ]
+    inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
 
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
-    crafty = [b[i].title for i in b if b[i].told_by == 'crafty']
-    cautious = [b[i].title for i in b if b[i].told_by == 'cautious']
-    lively = [b[i].title for i in b if b[i].told_by == 'lively']
+    #    crafty = [b[i].title for i in b if b[i].told_by == 'crafty']
+    #    cautious = [b[i].title for i in b if b[i].told_by == 'cautious']
+    #     lively = [b[i].title for i in b if b[i].told_by == 'lively']
 
-    # Rank explained:
-    # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
+    #  Rank explained:
+    #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
@@ -66,10 +63,14 @@ def graph_a():
                        bgcolor="LightBlue:LightGray")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
-        graph.add_subgraph(subtitles, name="cluster_{}".format(i), **i_props)
-    #graph.add_subgraph(crafty, name="cluster_crafty")
-    #graph.add_subgraph(cautious, name="cluster_cautious")
-    #graph.add_subgraph(lively, name="cluster_lively")
+        inner_by_to = [b[j].told_by
+                       for j in inner[i]] + [b[j].told_to for j in inner[i]]
+        graph.add_subgraph(subtitles + [n for n in inner_by_to],
+                           name="cluster_{}".format(i),
+                           **i_props)
+    # graph.add_subgraph(crafty, name="cluster_crafty")
+    # graph.add_subgraph(cautious, name="cluster_cautious")
+    # graph.add_subgraph(lively, name="cluster_lively")
 
     graph.unflatten("-f -l3").layout()
     graph.write("book-1a.dot")
@@ -95,8 +96,8 @@ def graph_b():
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].told_to]
-    # Rank explained:
-    # https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html#:~:text=Ranks%20and%20Subgraphs,placed%20further%20to%20the%20right.
+    #  Rank explained:
+    #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
@@ -112,7 +113,7 @@ def graph_b():
 def main():
     "DDraw the graphs"
     graph_a()
-    #graph_b()
+    # graph_b()
 
 
 if __name__ == '__main__':
