@@ -24,6 +24,7 @@ tm_props = {"carrowhead": "filled"}  # title->moral
 g_props = {
     "label": "Graphatantra",
     "fontname": "helvetica",
+    "packmode": "clust",
     "outputMode": "nodesfirst",
     "outputorder": "nodesfirst",
 }  # graph
