@@ -32,7 +32,7 @@ g_props = {
 
 def graph_a():
     "Version A. Morals are nodes."
-    graph = pgv.AGraph(directed=True, name="book-1a", **g_props)
+    graph = pgv.AGraph(directed=False, name="book-1a", **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
         ec = c[b[i].told_by].color
