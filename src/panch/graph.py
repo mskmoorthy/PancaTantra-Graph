@@ -55,6 +55,7 @@ def graph_a():
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
+                       label="Book 1",
                        bgcolor="LightGray:PaleTurquoise")
     graph.add_subgraph(animals,
                        label="Cast",
@@ -67,6 +68,7 @@ def graph_a():
                        for j in inner[i]] + [b[j].told_to for j in inner[i]]
         graph.add_subgraph(subtitles + [n for n in inner_by_to],
                            name="cluster_{}".format(i),
+                           label="Framed {}".format(i),
                            **i_props)
     # graph.add_subgraph(crafty, name="cluster_crafty")
     # graph.add_subgraph(cautious, name="cluster_cautious")
