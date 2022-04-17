@@ -15,6 +15,7 @@ i_props = {  # inner subgraph
     "bgcolor": "CornflowerBlue:PaleGoldenrod"
 }
 m_props = {  # moral
+    "shape": "box",
     "fontsize": "6pt",
     "style": "striped",
     "fontname": "helvetica italic"
