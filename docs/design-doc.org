@@ -73,6 +73,8 @@ a visual search engine.
   - The underlying semantics present in the structure of the book is
     conveyed to Graphviz via subgraphs with appropriate ~rank~ values
     e.g. _rank=source_ to influce the order in which nodes are laid out.
+  - Related nodes are rendered in a group with a common background by
+    specifying the subgraphs as /cluster_<name>/.
   - Notice the call to _unflatten_ in graph.py to create more space
     between the nodes for clarity.
   - Graphviz comes with a number of layout engines; after
