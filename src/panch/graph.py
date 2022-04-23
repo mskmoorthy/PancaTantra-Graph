@@ -120,8 +120,16 @@ def graph_b():
 
 def main():
     "DDraw the graphs"
+    import os
+    progs = ['dot', 'twopi']
+    pdf = '{} book-1{}.dot | gvcolor | {} -Tpdf -o {}-1{}.pdf '
+    plain = '{} book-1{}.dot | gvcolor | {} -Tplain -o {}-1{}.plain '
     graph_a()
     graph_b()
+    for version in ['a', 'b']:
+        for p in progs:
+            os.system(pdf.format(p, version, p, p, version))
+            os.system(plain.format(p, version, p, p, version))
 
 
 if __name__ == '__main__':
