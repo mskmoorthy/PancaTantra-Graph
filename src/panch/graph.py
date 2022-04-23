@@ -3,6 +3,8 @@ __author__ = "tv.raman.tv@gmail.com"
 
 import pygraphviz as pgv
 import entities
+#  Rank explained:
+#  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
 
 b = entities.book_1
 c = entities.cast_1
@@ -52,12 +54,7 @@ def graph_a():
 
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
-    #    crafty = [b[i].title for i in b if b[i].told_by == 'crafty']
-    #    cautious = [b[i].title for i in b if b[i].told_by == 'cautious']
-    #     lively = [b[i].title for i in b if b[i].told_by == 'lively']
 
-    #  Rank explained:
-    #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
@@ -76,10 +73,6 @@ def graph_a():
                            name="cluster_{}".format(i),
                            label="Frame {}".format(i),
                            **i_props)
-    # graph.add_subgraph(crafty, name="cluster_crafty")
-    # graph.add_subgraph(cautious, name="cluster_cautious")
-    # graph.add_subgraph(lively, name="cluster_lively")
-
     graph.unflatten("-f -l3").layout()
     graph.write("book-1a.dot")
 
@@ -104,8 +97,6 @@ def graph_b():
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].moral]
 
-    #  Rank explained:
-    #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
