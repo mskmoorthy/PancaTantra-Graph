@@ -1,4 +1,4 @@
-PROGS:=twopi  dot neato #circo patchwork osage 
+PROGS:=twopi  dot # neato circo patchwork osage 
 all: pdf plain
 
 pdf: graph.py entities.py cast-1.csv book-1.csv
