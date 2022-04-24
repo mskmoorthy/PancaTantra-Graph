@@ -34,7 +34,8 @@ g_props = {
 
 def graph_a():
     "Version A. Morals are nodes."
-    graph = pgv.AGraph(directed=True, name="book-1a", **g_props)
+    gName = 'book-1a'
+    graph = pgv.AGraph(directed=True, name=gName, **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
         ec = c[b[i].told_by].color
@@ -58,7 +59,7 @@ def graph_a():
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
-                       label="Book 1",
+                       label=gName,
                        bgcolor="LightGray:PaleTurquoise")
     graph.add_subgraph(animals,
                        label="Cast",
@@ -74,12 +75,13 @@ def graph_a():
                            label="Frame {}".format(i),
                            **i_props)
     graph.unflatten("-f -l3").layout()
-    graph.write("book-1a.dot")
+    graph.write("{}.dot".format(gName))
 
 
 def graph_b():
     "Version B: told_to is an edge label."
-    graph = pgv.AGraph(directed=True, name="book-1b", **g_props)
+    gName = 'book-1b'
+    graph = pgv.AGraph(directed=True, name=gName, **g_props)
     for i in sorted(b, key=int):
         ec = c[b[i].told_by].color
         s_label = "{}: {}".format(i, b[i].title)
@@ -100,7 +102,7 @@ def graph_b():
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
-                       label="Book 1",
+                       label=gName,
                        bgcolor="LightGray:PaleTurquoise")
     graph.add_subgraph(animals,
                        label="Cast",
@@ -115,7 +117,7 @@ def graph_b():
                            label="Frame {}".format(i),
                            **i_props)
     graph.unflatten("-f -l3").layout()
-    graph.write("book-1b.dot")
+    graph.write("{}.dot".format(gName))
 
 
 def main():
