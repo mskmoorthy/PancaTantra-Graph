@@ -121,14 +121,14 @@ def graph_b():
 def main():
     "Output Graphs"
     import os
-    progs = ['dot', 'twopi']
-    formats = ['pdf', 'plain']
-    options = ['a', 'b']
+    prog = ['dot', 'twopi']
+    fmt = ['pdf', 'plain']
+    opt = ['a', 'b']
     cmd = '{} book-1{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
     graph_a()
     graph_b()
-    [[[os.system(cmd.format(p, o, p, f, p, o, f)) for o in options]
-      for p in progs] for f in formats]
+    [[[os.system(cmd.format(p, o, p, f, p, o, f)) for o in opt] for p in prog]
+     for f in fmt]
 
 
 if __name__ == '__main__':
