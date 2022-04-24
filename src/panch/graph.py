@@ -26,6 +26,7 @@ tm_props = {"carrowhead": "filled"}  # title->moral
 g_props = {
     "fixedsize": "shape",
     "overlap": "prism",
+    "splines": "true",
     "label": "Graphatantra",
     "fontname": "helvetica",
     "packmode": "clust",
