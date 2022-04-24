@@ -127,10 +127,8 @@ def main():
     cmd = '{} book-1{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
     graph_a()
     graph_b()
-    for o in options:
-        for p in progs:
-            for f in formats:
-                os.system(cmd.format(p, o, p, f, p, o, f))
+    [[[os.system(cmd.format(p, o, p, f, p, o, f)) for o in options]
+      for p in progs] for f in formats]
 
 
 if __name__ == '__main__':
