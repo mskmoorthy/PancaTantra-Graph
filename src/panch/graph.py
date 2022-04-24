@@ -10,7 +10,7 @@ b = entities.book_1
 c = entities.cast_1
 
 c_props = {"shape": "box", "style": "filled, bold", "fontsize": "6pt"}  # cast
-t_props = {"shape": "box", "fontsize": "6pt", "style": "filled"}  # book
+t_props = {"shape": "box", "fontsize": "6pt", "style": "dotted"}  # book
 i_props = {  # inner subgraph
     "style": "dashed,radial",
     "rank": "same",
@@ -52,7 +52,6 @@ def graph_a():
             ]
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
-
     animals = ['rusty', 'lively', 'crafty', 'cautious']
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
