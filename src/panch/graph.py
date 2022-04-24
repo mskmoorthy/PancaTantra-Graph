@@ -125,7 +125,7 @@ def graph_b():
 def main():
     "Output Graphs"
     import os
-    prog = ['dot', 'twopi']
+    prog = ['dot', 'twopi', 'sfdp']
     fmt = ['pdf', 'plain']
     opt = ['a', 'b']
     cmd = '{} book-1{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
