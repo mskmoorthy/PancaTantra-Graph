@@ -119,17 +119,18 @@ def graph_b():
 
 
 def main():
-    "DDraw the graphs"
+    "Output Graphs"
     import os
     progs = ['dot', 'twopi']
-    pdf = '{} book-1{}.dot | gvcolor | {} -Tpdf -o {}-1{}.pdf '
-    plain = '{} book-1{}.dot | gvcolor | {} -Tplain -o {}-1{}.plain '
+    formats = ['pdf', 'plain']
+    options = ['a', 'b']
+    cmd = '{} book-1{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
     graph_a()
     graph_b()
-    for version in ['a', 'b']:
+    for o in options:
         for p in progs:
-            os.system(pdf.format(p, version, p, p, version))
-            os.system(plain.format(p, version, p, p, version))
+            for f in formats:
+                os.system(cmd.format(p, o, p, f, p, o, f))
 
 
 if __name__ == '__main__':

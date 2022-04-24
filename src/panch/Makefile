@@ -1,8 +1,5 @@
-
-all: pdf plain
-
-pdf: graph.py entities.py cast-1.csv book-1.csv
-	python graph.py	
+all:  graph.py entities.py cast-1.csv book-1.csv
+	python graph.py
 
 clean:
 	rm -f book*.dot  *.pdf *.plain
