@@ -6,8 +6,10 @@ import entities
 #  Rank explained:
 #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
 
-b = entities.book_1
-c = entities.cast_1
+b1 = entities.book_1
+c1 = entities.cast_1
+b2 = entities.book_2
+c2 = entities.cast_2
 
 c_props = {"shape": "box", "style": "filled, bold", "fontsize": "6pt"}  # cast
 t_props = {"shape": "box", "fontsize": "6pt", "style": "dotted"}  # book
@@ -35,9 +37,9 @@ g_props = {
 }  # graph
 
 
-def graph_a():
+def graph_a(b,c):
     "Version A. Morals are nodes."
-    gName = 'book-1a'
+    gName = 'book-2a'
     graph = pgv.AGraph(directed=True, name=gName, **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
@@ -55,7 +57,9 @@ def graph_a():
             ]
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
-    animals = ['rusty', 'lively', 'crafty', 'cautious']
+    animals1 = ['rusty', 'lively', 'crafty', 'cautious']
+    animals2  = ['gold', 'slow', 'spot', 'swift']
+    animals = animals2
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
     graph.add_subgraph(top,
@@ -76,7 +80,8 @@ def graph_a():
                            name="cluster_{}".format(i),
                            label="Frame {}".format(i),
                            **i_props)
-    graph.unflatten("-f -l3").layout()
+#    graph.unflatten("-f -l3").layout()
+    graph.unflatten("-f -l2").layout()
     graph.write("{}.dot".format(gName))
 
 
@@ -88,8 +93,9 @@ def main():
     opt = [
         'a',
     ]
-    cmd = '{} book-1{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
-    graph_a()
+#   cmd = '{} book-2{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
+    cmd = '{} book-2{}.dot | gvcolor | {} -T{} -o  {}-2{}.{}'
+    graph_a(b2,c2)
     [[[os.system(cmd.format(p, o, p, f, p, o, f)) for o in opt] for p in prog]
      for f in fmt]
 
