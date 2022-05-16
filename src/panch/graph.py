@@ -6,11 +6,6 @@ import entities
 #  Rank explained:
 #  https://www.worthe-it.co.za/blog/2017-09-19-quick-introduction-to-graphviz.html=
 
-b1 = entities.book_1
-c1 = entities.cast_1
-b2 = entities.book_2
-c2 = entities.cast_2
-
 c_props = {"shape": "box", "style": "filled, bold", "fontsize": "6pt"}  # cast
 t_props = {"shape": "box", "fontsize": "6pt", "style": "dotted"}  # book
 i_props = {  # inner subgraph
@@ -37,9 +32,8 @@ g_props = {
 }  # graph
 
 
-def graph_a(b,c):
+def graph(gName, b, c, primary):
     "Version A. Morals are nodes."
-    gName = 'book-2a'
     graph = pgv.AGraph(directed=True, name=gName, **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
@@ -57,21 +51,18 @@ def graph_a(b,c):
             ]
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
-    animals1 = ['rusty', 'lively', 'crafty', 'cautious']
-    animals2  = ['gold', 'slow', 'spot', 'swift']
-    animals = animals2
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
+    graph.add_subgraph(primary,
+                       label="Cast",
+                       rank="source",
+                       name="cluster_cast",
+                       bgcolor="LightBlue:LightGray")
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
                        label=gName,
                        bgcolor="LightGray:PaleTurquoise")
-    graph.add_subgraph(animals,
-                       label="Cast",
-                       rank="source",
-                       name="cluster_cast",
-                       bgcolor="LightBlue:LightGray")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
         inner_by_to = [b[j].told_by for j in inner[i]]
@@ -80,7 +71,7 @@ def graph_a(b,c):
                            name="cluster_{}".format(i),
                            label="Frame {}".format(i),
                            **i_props)
-#    graph.unflatten("-f -l3").layout()
+
     graph.unflatten("-f -l2").layout()
     graph.write("{}.dot".format(gName))
 
@@ -90,14 +81,14 @@ def main():
     import os
     prog = ['dot', 'twopi', 'sfdp']
     fmt = ['pdf', 'plain']
-    opt = [
-        'a',
-    ]
-#   cmd = '{} book-2{}.dot | gvcolor | {} -T{} -o  {}-1{}.{}'
-    cmd = '{} book-2{}.dot | gvcolor | {} -T{} -o  {}-2{}.{}'
-    graph_a(b2,c2)
-    [[[os.system(cmd.format(p, o, p, f, p, o, f)) for o in opt] for p in prog]
-     for f in fmt]
+    names = ['book-1', 'book-2']
+    cmd = '{} {}.dot | gvcolor | {} -T{} -o {}-{}.{}'
+    graph('book-1', entities.book_1, entities.cast_1,
+          ['rusty', 'lively', 'crafty', 'cautious'])
+    graph('book-2', entities.book_2, entities.cast_2,
+          ['gold', 'slow', 'spot', 'swift'])
+    [[[os.system(cmd.format(p, n, p, f, p, n, f)) for n in names]
+      for p in prog] for f in fmt]
 
 
 if __name__ == '__main__':
