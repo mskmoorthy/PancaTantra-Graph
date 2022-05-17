@@ -32,7 +32,7 @@ g_props = {
 }  # graph
 
 
-def graph(gName, b, c, primary):
+def graph(gName, b, c):
     "Version A. Morals are nodes."
     graph = pgv.AGraph(directed=True, name=gName, **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
@@ -53,7 +53,7 @@ def graph(gName, b, c, primary):
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
-    graph.add_subgraph(primary,
+    graph.add_subgraph([i for i in c if c[i].primary is not None],
                        label="Cast",
                        rank="source",
                        name="cluster_cast",
@@ -83,10 +83,16 @@ def main():
     fmt = ['pdf', 'plain']
     names = ['book-1', 'book-2']
     cmd = '{} {}.dot | gvcolor | {} -T{} -o {}-{}.{}'
-    graph('book-1', entities.book_1, entities.cast_1,
-          ['rusty', 'lively', 'crafty', 'cautious'])
-    graph('book-2', entities.book_2, entities.cast_2,
-          ['gold', 'slow', 'spot', 'swift'])
+    graph(
+        'book-1',
+        entities.book_1,
+        entities.cast_1,
+    )
+    graph(
+        'book-2',
+        entities.book_2,
+        entities.cast_2,
+    )
     [[[os.system(cmd.format(p, n, p, f, p, n, f)) for n in names]
       for p in prog] for f in fmt]
 

@@ -1,8 +1,8 @@
-name, species, color
-rusty, lion, red
-crafty, jackal, green
-cautious, jackal, yellow
-lively, bull, blue
+name, species, color, primary
+rusty, lion, red, 1
+crafty, jackal, green, 1
+cautious, jackal, yellow, 1
+lively, bull, blue, 1
 brag, sandpiper, pink
 steady, sandpiper, lavender
 a crow, crow, black
