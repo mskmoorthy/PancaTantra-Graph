@@ -7,7 +7,7 @@ import graph
 
 def cast_extra():
     "identify redundant cast members"
-   # s1 = entities.book_1
+    # s1 = entities.book_1
     s2 = entities.book_2
     c2 = [s2[id].told_to for id in s2] + [s2[id].told_by for id in s2]
     all = [s2[i].told_by for i in s2] + [s2[i].told_to for i in s2]
@@ -17,7 +17,7 @@ def cast_extra():
 def cast_missing():
     #s1 = entities.book_1
     s2 = entities.book_2
-    
+
     c2 = [s2[id].told_to for id in s2] + [s2[id].told_by for id in s2]
     return {w for w in c2 if w not in entities.cast_2}
 
@@ -41,12 +41,18 @@ def report(g):
 def moral_len():
     "Show length of morals."
     print("Moral Lengths")
+    m = [entities.book_1[i].moral for i in entities.book_1]
+    [print(len(i), ": ", i) for i in sorted(m, key=len)]
+    print("Moral Lengths")
     m = [entities.book_2[i].moral for i in entities.book_2]
     [print(len(i), ": ", i) for i in sorted(m, key=len)]
 
 
 def title_len():
     "Show length of titles."
+    print("Title Lengths")
+    m = [entities.book_1[i].title for i in entities.book_1]
+    [print(len(i), ": ", i) for i in sorted(m, key=len)]
     print("Title Lengths")
     m = [entities.book_2[i].title for i in entities.book_2]
     [print(len(i), ": ", i) for i in sorted(m, key=len)]
