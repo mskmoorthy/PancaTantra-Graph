@@ -7,8 +7,9 @@ import graph
 
 def cast_extra():
     "identify redundant cast members"
-    # s1 = entities.book_1
+     s1 = entities.book_1
     s2 = entities.book_2
+    c1 = [s1[id].told_to for id in s2] + [s1[id].told_by for id in s1]
     c2 = [s2[id].told_to for id in s2] + [s2[id].told_by for id in s2]
     all = [s2[i].told_by for i in s2] + [s2[i].told_to for i in s2]
     return {i for i in all if i not in c2}
