@@ -33,7 +33,14 @@ def title_len(name, b):
     [print(len(i), ": ", i) for i in sorted(m, key=len)]
 
 
+def show_primary(c):
+    "Show primary characters."
+    return [i for i in c if c[i].primary is not None]
+
+
 if __name__ == '__main__':
+    print("Cast 1:", show_primary(entities.cast_1))
+    print("Cast 2:", show_primary(entities.cast_2))
     print("book-1 Missing Cast Members",
           cast_missing(entities.book_1, entities.cast_1))
     print("book-2 Missing Cast Members",
