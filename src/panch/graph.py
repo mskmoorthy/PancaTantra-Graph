@@ -33,7 +33,7 @@ g_props = {
 
 
 def graph(gName, b, c):
-    "Version A. Morals are nodes."
+    "Draw the graph named gName for  book b and cast c."
     graph = pgv.AGraph(directed=True, name=gName, **g_props)
     [graph.add_node(c[i].name, color=c[i].color, **c_props) for i in c]
     for i in sorted(b, key=int):
