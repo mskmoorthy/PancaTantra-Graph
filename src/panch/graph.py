@@ -17,7 +17,7 @@ m_props = {  # moral
     "shape": "box",
     "fontsize": "6pt",
     "style": "striped",
-    "fontname": "helvetica italic"
+    "fontname": "palatino italic"
 }
 tm_props = {"carrowhead": "filled"}  # title->moral
 g_props = {
@@ -25,7 +25,7 @@ g_props = {
     "overlap": "prism",
     "splines": "true",
     "label": "Graphatantra",
-    "fontname": "helvetica",
+    "fontname": "palatino",
     "packmode": "clust",
     "outputMode": "nodesfirst",
     "outputorder": "nodesfirst",
