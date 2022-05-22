@@ -51,13 +51,7 @@ def graph(gName, b, c):
             ]
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
-    top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
-    graph.add_subgraph(top,
-                       rank="same",
-                       name="cluster_outer",
-                       label=gName,
-                       bgcolor="LightGray:PaleTurquoise")
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
         inner_by_to = [b[j].told_by for j in inner[i]]
