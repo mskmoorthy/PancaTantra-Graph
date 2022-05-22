@@ -53,11 +53,6 @@ def graph(gName, b, c):
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
     top = [b['0'].title, b['0'].told_by, b['0'].told_to, b['0'].moral]
 
-    graph.add_subgraph([i for i in c if c[i].primary is not None],
-                       label="Cast",
-                       rank="source",
-                       name="cluster_cast",
-                       bgcolor="LightBlue:LightGray")
     graph.add_subgraph(top,
                        rank="same",
                        name="cluster_outer",
