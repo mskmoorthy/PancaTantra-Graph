@@ -72,7 +72,7 @@ def main():
     prog = ['dot', 'twopi', 'sfdp']
     fmt = ['pdf', 'plain']
     names = ['book-1', 'book-2']
-    cmd = '{} {}.dot | gvcolor | {} -T{} -o {}-{}.{}'
+    cmd = '{} {}.dot | gvcolor | {} -T{} -o {}-{}.{}'  # Command template
     graph('book-1', entities.book_1, entities.cast_1)
     graph('book-2', entities.book_2, entities.cast_2)
     [[[os.system(cmd.format(p, n, p, f, p, n, f)) for n in names]
