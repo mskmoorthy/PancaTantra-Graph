@@ -52,7 +52,7 @@ def graph(gName, b, c):
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
     # if we drop the next (noop) line, graph print size increases
-    #_ignore = [b['0'].title]
+
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
         inner_by_to = [b[j].told_by for j in inner[i]]
