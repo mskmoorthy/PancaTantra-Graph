@@ -1,11 +1,13 @@
 index,title,told_by,told_to,moral,stories
-1,peculiuar birds,keen, group of doves,infighting leads to destruction,
+1,peculiar birds,keen, group of doves,infighting leads to destruction,
 2, crow and mouse become friends,sharma, princes, enemies could be friends,
 3, crow and mouse go to see the turtle,sharma, princes,friends help each other in distress,4
-4,mouse loses everything,smart, sense ,smell makes the mouse so clever,"5 7"
+01,mouse loses everything,smart, sense,smell makes the mouse so clever,
+4,mouse loses everything,smart, sight,smell makes the mouse so clever,5 7
 5,mrs schrewd and her bargain,venerable,missing ear, give half to the needy,6 
 6,ill-fated jackal hoarder, brahmin, wife, greed kills,
-7,man will get what is due him, smart, slight,honesty pays,
+001,man will get what is due him, smart, sense,honesty pays,
+7,man will get what is due him, smart, sight,honesty pays,
 8,turtle tries to cheer up the mouse, sharma, princes,no wealth like contentment,9
 9, weaver named plain, smart,sense, fate will decide what is good or bad,10
 10, hang-ball and greedy jackal, plain, figure, a bird in hand is worth two in bush,
