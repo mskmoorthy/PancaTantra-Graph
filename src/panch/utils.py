@@ -41,17 +41,25 @@ def show_primary(c):
 if __name__ == '__main__':
     print("Cast 1:", show_primary(entities.cast_1))
     print("Cast 2:", show_primary(entities.cast_2))
+    print("Cast 3:", show_primary(entities.cast_3))
     print("book-1 Missing Cast Members",
           cast_missing(entities.book_1, entities.cast_1))
     print("book-2 Missing Cast Members",
           cast_missing(entities.book_2, entities.cast_2))
+    print("book-3 Missing Cast Members",
+          cast_missing(entities.book_3, entities.cast_3))
     print("book-1: Missing stories", stories_missing(entities.book_1))
     print("book-2: Missing stories", stories_missing(entities.book_2))
+    print("book-3: Missing stories", stories_missing(entities.book_3))
     print("Book-1: Extra Cast Members",
           cast_extra(entities.book_1, entities.cast_1))
     print("Book-2: Extra Cast Members",
           cast_extra(entities.book_2, entities.cast_2))
+    print("Book-3: Extra Cast Members",
+          cast_extra(entities.book_3, entities.cast_3))
     moral_len("book-1", entities.book_1)
     title_len('book-1', entities.book_1)
     moral_len("book-2", entities.book_2)
     title_len('book-2', entities.book_2)
+    moral_len("book-2", entities.book_3)
+    title_len('book-3', entities.book_3)

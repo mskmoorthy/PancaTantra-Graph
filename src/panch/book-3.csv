@@ -1,0 +1,19 @@
+index,title,told_by,told_to,moral,stories
+"1","birds pick a king", "live-strong", "spirit", "be shrewd", "2" 
+"2","how the rabbit fooled the elephant", "crow", "group of birds","smartness can outwit the power","3 4 5"
+"3","umpire cat and his ruling", "crow", "group of birds","do not trust the enemy",
+"4","how the brahmin lost his goat","live-strong", "spirit","beware of tricksters",
+"5","how the angry ants ate the giant snake", "live-strong", "spirit","unity is strength",
+"6","snake who paid in gold", "red-eye", "owl-king","do not be greedy" ,"7"
+"7","unfirendly swans of lotus lake","brahmin", "his family","be generous to all creatures",
+"8","doves sacrifice","fierce-eye","owl-king",  "seek virtue no matter the cost",
+"9","old man who had a young wife","flame-eye","owl-king", "a thief can become a benefector",
+"10","brahmin, thief and demon goat","flame-eye","owl-king","wrong to kill a supplicant",
+"11","snake in the prince's belly", "wall-eye","owl-king", "better to keep secrets",
+"12","carpenter duped by a wicked wife","red-eye","group of counsellors", "beware of deceprions", 
+"13","once a mouse always a mouse","red-eye","live-strong","every one goes back to the natural specis", 
+"14","bird with gold droppings","red-eye","counsellor","people are  gullible",
+"15","talking cave","red-eye", "his staff","planning ahead is so much better than being caught",
+"16", "frogs that rode snake-back","live-strong","spirit","endurance is paid off",
+"17","brahmins revenge","fang","another-snake", "revenge takes time and planning",
+"0","crows and owls","sharma", "princes", "crows are wiser", "1 2 6 8 9 10 11 12 13 14 15 16 17"

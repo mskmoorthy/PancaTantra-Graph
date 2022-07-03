@@ -71,10 +71,12 @@ def main():
     import os
     prog = ['dot', 'twopi', 'sfdp']
     fmt = ['pdf', 'plain']
-    names = ['book-1', 'book-2']
+#    names = ['book-1', 'book-2']
+    names = ['book-1', 'book-2','book-3']
     cmd = '{} {}.dot | gvcolor | {} -T{} -o {}-{}.{}'  # Command template
     graph('book-1', entities.book_1, entities.cast_1)
     graph('book-2', entities.book_2, entities.cast_2)
+    graph('book-3', entities.book_3, entities.cast_3)
     [[[os.system(cmd.format(p, n, p, f, p, n, f)) for n in names]
       for p in prog] for f in fmt]
 
