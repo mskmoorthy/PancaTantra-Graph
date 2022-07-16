@@ -38,11 +38,21 @@ with open('book-3.csv', encoding='utf-8') as f:
     reader = csv.DictReader(f, skipinitialspace=True)
     book_3 = {row['index']: Story(**row) for row in reader}
 
+with open('cast-4.csv', encoding='utf-8') as f:
+    reader = csv.DictReader(f, skipinitialspace=True)
+    cast_4 = {row['name']: Character(**row) for row in reader}
+
+with open('book-4.csv', encoding='utf-8') as f:
+    reader = csv.DictReader(f, skipinitialspace=True)
+    book_4 = {row['index']: Story(**row) for row in reader}
+
 stories_finalize(book_1)
 stories_finalize(book_2)
 stories_finalize(book_3)
+stories_finalize(book_4)
 
 if __name__ == '__main__':
     [book_1[s].show() for s in book_1]
     [book_2[s].show() for s in book_2]
     [book_3[s].show() for s in book_3]
+    [book_4[s].show() for s in book_4]
