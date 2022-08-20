@@ -20,7 +20,7 @@ m_props = {  # moral
     "fontname": "palatino italic"
 }
 tm_props = {"carrowhead": "filled"}  # title->moral
-g_props = {
+g_props = {  # graph
     "fixedsize": "shape",
     "overlap": "prism",
     "splines": "true",
@@ -51,7 +51,6 @@ def graph(gName, b, c):
             ]
 
     inner = [b[i].stories for i in b if i != '0' and b[i].stories is not None]
-    # if we drop the next (noop) line, graph print size increases
 
     for i in range(len(inner)):
         subtitles = [b[j].title for j in inner[i]]
